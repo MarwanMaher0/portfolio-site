@@ -37,13 +37,13 @@
               </NuxtLink>
               <div class="tags">
                 <span>
+                  <NuxtLink to="#0">NuxtJs</NuxtLink>
+                </span>
+                <span>
                   <NuxtLink to="#0">App</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Fitnes</NuxtLink>
-                </span>
-                <span>
-                  <NuxtLink to="#0">Creative</NuxtLink>
+                  <NuxtLink to="#0">Landing Page</NuxtLink>
                 </span>
               </div>
             </div>
@@ -61,13 +61,13 @@
               </NuxtLink>
               <div class="tags">
                 <span>
-                  <NuxtLink to="#0">App</NuxtLink>
+                  <NuxtLink to="#0">NuxtJs</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Fitnes</NuxtLink>
+                  <NuxtLink to="#0">Gaming</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Creative</NuxtLink>
+                  <NuxtLink to="#0">Website</NuxtLink>
                 </span>
               </div>
             </div>
@@ -85,13 +85,13 @@
               </NuxtLink>
               <div class="tags">
                 <span>
-                  <NuxtLink to="#0">App</NuxtLink>
+                  <NuxtLink to="#0">VueJs</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Fitnes</NuxtLink>
+                  <NuxtLink to="#0">Education</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Creative</NuxtLink>
+                  <NuxtLink to="#0">Courses</NuxtLink>
                 </span>
               </div>
             </div>
@@ -109,13 +109,13 @@
               </NuxtLink>
               <div class="tags">
                 <span>
-                  <NuxtLink to="#0">App</NuxtLink>
+                  <NuxtLink to="#0">HTML</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Fitnes</NuxtLink>
+                  <NuxtLink to="#0">eCommerce</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Creative</NuxtLink>
+                  <NuxtLink to="#0">Furniture</NuxtLink>
                 </span>
               </div>
             </div>
@@ -133,13 +133,13 @@
               </NuxtLink>
               <div class="tags">
                 <span>
-                  <NuxtLink to="#0">App</NuxtLink>
+                  <NuxtLink to="#0">VueJs</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Fitnes</NuxtLink>
+                  <NuxtLink to="#0">Engineering</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Creative</NuxtLink>
+                  <NuxtLink to="#0">Standards</NuxtLink>
                 </span>
               </div>
             </div>
@@ -157,13 +157,13 @@
               </NuxtLink>
               <div class="tags">
                 <span>
-                  <NuxtLink to="#0">App</NuxtLink>
+                  <NuxtLink to="#0">HTML</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Fitnes</NuxtLink>
+                  <NuxtLink to="#0">Training</NuxtLink>
                 </span>
                 <span>
-                  <NuxtLink to="#0">Creative</NuxtLink>
+                  <NuxtLink to="#0">Website</NuxtLink>
                 </span>
               </div>
             </div>
@@ -173,7 +173,6 @@
     </div>
   </section>
 </template>
-
 
 <script setup>
 import initIsotope from "@/common/initIsotope";
