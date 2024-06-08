@@ -14,7 +14,10 @@
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <div class="form wow fadeInUp" data-wow-delay=".5s">
-            <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"
+              @submit.prevent="submitForm">
+              <input type="hidden" name="form-name" value="contact" />
+
               <div class="messages"></div>
               <div class="controls">
                 <div class="row">
@@ -62,6 +65,7 @@
   </section>
 </template>
 
+
 <script setup>
 import { ref } from 'vue';
 const { noLine } = defineProps(['noLine']);
@@ -72,4 +76,17 @@ const form = ref({
   subject: '',
   message: ''
 });
+
+const submitForm = () => {
+  const formElement = document.querySelector('#contact-form');
+  const formData = new FormData(formElement);
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(formData).toString()
+  })
+    .then(() => alert('Form successfully submitted'))
+    .catch((error) => alert(error));
+};
 </script>
