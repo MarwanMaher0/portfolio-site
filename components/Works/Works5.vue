@@ -31,7 +31,7 @@
                 <h6>Jironis</h6>
                 <p>Vue - Nuxt App Landing Page</p>
               </div>
-              <NuxtLink class="rota" to="/project-details2/project-details2-light">
+              <NuxtLink class="rota" to="https://jironis.vercel.app/">
                 <img src="/img/portfolio/freelancer/1.jpg" alt="image" />
                 <div class="item-img-overlay"></div>
               </NuxtLink>
@@ -55,7 +55,7 @@
                 <h6>Bonx</h6>
                 <p>Vue - Nuxt Gaming Website </p>
               </div>
-              <NuxtLink class="rota" to="/project-details2/project-details2-light">
+              <NuxtLink class="rota" to="https://bonx-drab.vercel.app/">
                 <img src="/img/portfolio/freelancer/2.jpg" alt="image" />
                 <div class="item-img-overlay"></div>
               </NuxtLink>
@@ -79,7 +79,7 @@
                 <h6>Educal Courses</h6>
                 <p>Vue- Online Course & Education Vue js</p>
               </div>
-              <NuxtLink class="rota" to="/project-details2/project-details2-light">
+              <NuxtLink class="rota" to="https://educal-three.vercel.app/">
                 <img src="/img/portfolio/freelancer/3.jpg" alt="image" />
                 <div class="item-img-overlay"></div>
               </NuxtLink>
@@ -103,7 +103,7 @@
                 <h6>eCommerce Furniture</h6>
                 <p>HTML - Furniture Website</p>
               </div>
-              <NuxtLink class="rota" to="/project-details2/project-details2-light">
+              <NuxtLink class="rota" to="https://site-design-eta.vercel.app/">
                 <img src="/img/portfolio/freelancer/4.jpg" alt="image" />
                 <div class="item-img-overlay"></div>
               </NuxtLink>
@@ -127,7 +127,7 @@
                 <h6>Resilience Scale For Schools </h6>
                 <p>Vue - website to assist engineers in meeting design standards</p>
               </div>
-              <NuxtLink class="rota" to="/project-details2/project-details2-light">
+              <NuxtLink class="rota" to="https://resilience-scale-for-schools.netlify.app/">
                 <img src="/img/portfolio/freelancer/5.jpg" alt="image" />
                 <div class="item-img-overlay"></div>
               </NuxtLink>
@@ -151,7 +151,7 @@
                 <h6>Massively</h6>
                 <p>HTML - First style I train on</p>
               </div>
-              <NuxtLink class="rota" to="/project-details2/project-details2-light">
+              <NuxtLink class="rota" to="https://massively-lovat.vercel.app/">
                 <img src="/img/portfolio/freelancer/6.jpg" alt="image" />
                 <div class="item-img-overlay"></div>
               </NuxtLink>

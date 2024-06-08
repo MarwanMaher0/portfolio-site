@@ -30,11 +30,7 @@
               Works
             </a>
           </li>
-          <li class="nav-item">
-            <a @click="scrollToSection('Contact')" class="nav-link">
-              Contact
-            </a>
-          </li>
+
         </ul>
       </div>
     </div>

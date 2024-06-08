@@ -2,105 +2,59 @@
   <footer :class="`${!hideBGCOLOR ? 'sub-bg' : ''}`">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-6">
           <div class="item md-mb50">
             <div class="title">
-              <h5>Contact Us</h5>
+              <h5>Contact Me</h5>
             </div>
             <ul>
               <li>
                 <span class="icon pe-7s-map-marker"></span>
                 <div class="cont">
                   <h6>Officeal Address</h6>
-                  <p>504 White St . Dawsonville, GA 30534 , New York</p>
+                  <p>Assiut , Egypt</p>
                 </div>
               </li>
               <li>
                 <span class="icon pe-7s-mail"></span>
                 <div class="cont">
-                  <h6>Email Us</h6>
-                  <p>support@gmail.com</p>
+                  <h6>Email Me</h6>
+                  <p>Marwanmaher635@gmail.com</p>
                 </div>
               </li>
               <li>
                 <span class="icon pe-7s-call"></span>
                 <div class="cont">
-                  <h6>Call Us</h6>
-                  <p>+87986451666</p>
+                  <h6>Call Me</h6>
+                  <p>+201025027019</p>
                 </div>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="item md-mb50">
-            <div class="title">
-              <h5>Recent News</h5>
-            </div>
-            <ul>
-              <li>
-                <div class="img">
-                  <a href="#">
-                    <img src="/img/blog/1.jpg" alt="" />
-                  </a>
-                </div>
-                <div class="sm-post">
-                  <a href="#">
-                    <p>
-                      The Start-Up Ultimate Guide to Make Your WordPress
-                      Journal.
-                    </p>
-                    <span class="date">14 sep 2023</span>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="img">
-                  <a href="#">
-                    <img src="/img/blog/2.jpg" alt="" />
-                  </a>
-                </div>
-                <div class="sm-post">
-                  <a href="#">
-                    <p>
-                      The Start-Up Ultimate Guide to Make Your WordPress
-                      Journal.
-                    </p>
-                    <span class="date">14 sep 2023</span>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="subscribe">
-                  <input type="text" placeholder="Type Your Email" />
-                  <span class="subs pe-7s-paper-plane"></span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4">
+
+        <div class="col-lg-6">
           <div class="item">
-            <div class="logo">
-              <img src="/img/logo-light.png" alt="logo" />
+            <div class="esmy">
+              <span>Marwan Maher Mostafa</span>
             </div>
             <div class="social">
-              <a href="#0">
+              <a href="https://www.facebook.com/marwan.maher.50746">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#0">
+              <a href="https://twitter.com/MElg3fre">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#0">
+              <a href="https://www.instagram.com/marwan_elg3fre/">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="#0">
-                <i class="fab fa-youtube"></i>
+              <a href="https://www.linkedin.com/in/marwan-maher-b11628227/">
+                <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
             <div class="copy-right">
               <p>
-                © 2023, Vie Template. Made with passion by <a href="#0">ThemesCamp</a>.
+                © 2024, Made with passion by <a href="">Marwan Maher</a>.
               </p>
             </div>
           </div>
@@ -113,3 +67,10 @@
 <script setup>
 const { hideBGCOLOR } = defineProps(['hideBGCOLOR']);
 </script>
+
+<style>
+.esmy {
+  font-size: x-large;
+  padding-bottom: 20px;
+}
+</style>

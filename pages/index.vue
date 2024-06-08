@@ -4,7 +4,6 @@
   <Services id="About" />
   <Works id="Works" />
   <AboutUs />
-  <ContactForm noLine id="Contact" />
   <Footer />
 </template>
 
@@ -15,7 +14,6 @@ import FreelanceHeader from '@/components/Headers/FreelanceHeader';
 import Services from '@/components/Services/Services5';
 import Works from '@/components/Works/Works5';
 import AboutUs from '@/components/AboutUs/AboutUs2';
-import ContactForm from '@/components/Contact/ContactFormS';
 import Footer from '@/components/Common/Footer';
 definePageMeta({
   layout: "light",
