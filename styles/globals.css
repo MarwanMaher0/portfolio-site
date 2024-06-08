@@ -1,0 +1,7 @@
+.testimonials .arrows {
+  z-index: 999;
+}
+
+#arch-slider :is(.swiper-button-next, .swiper-button-prev) {
+  z-index: 100;
+}

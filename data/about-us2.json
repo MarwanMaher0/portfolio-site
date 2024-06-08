@@ -1,0 +1,29 @@
+{
+  "id": 1,
+  "image1": "/img/intro/1.jpg",
+  "image2": "/img/intro/3.jpg",
+  "image3": "/img/intro/2.jpg",
+  "smallTitle": "About Me",
+  "title": { "first": "Crafting Excellence", "second": "with Vue.js" },
+  "content": "Hello! I'm Marwan, a passionate Front End Developer specializing in Vue.js. I thrive on transforming innovative designs into fully functional, responsive web applications. With a keen eye for detail and a commitment to quality, I aim to deliver exceptional user experiences. Let's create something amazing together.",
+  "features": [
+    {
+      "id": 1,
+      "icon": "monitor ",
+      "name": { "first": "Clean", "second": "Code" },
+      "wowDelay": ".3s"
+    },
+    {
+      "id": 2,
+      "icon": "paint-bucket",
+      "name": { "first": "Creative", "second": "Design" },
+      "wowDelay": ".5s"
+    },
+    {
+      "id": 3,
+      "icon": "graph1",
+      "name": { "first": "High", "second": "Performance" },
+      "wowDelay": ".8s"
+    }
+  ]
+}
