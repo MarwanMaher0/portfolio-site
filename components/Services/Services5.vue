@@ -6,7 +6,7 @@
           <div class="sec-head text-center">
             <h6 class="wow fadeIn" data-wow-delay=".5s">Best Features</h6>
             <h3 class="wow color-font">
-              We are a new digital product development agency
+              Dedicated Front-End Developer Crafting Seamless User Experiences
             </h3>
           </div>
         </div>
