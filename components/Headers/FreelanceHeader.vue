@@ -10,11 +10,12 @@
         <div class="col-lg-8 valign">
           <div class="cont">
             <h1 class="cd-headline clip">
-              Hello, I'm Marwan, a passionate Vue.js developer with a flair for creating stunning and interactive web
-              designs. I specialize in crafting
+              Hi, I'm Marwan — Senior Frontend Engineer &amp; Tech Lead at SIPRC. I've shipped 15 production
+              applications in 3 years, leading a team of 6, building
               <span class="cd-words-wrapper">
                 <ClientOnly>
-                  <AutoTyperVue :text="['Innovative Web Apps', 'Responsive UI/UX', 'Vue.js Masterpieces']"
+                  <AutoTyperVue
+                    :text="['Enterprise SaaS Platforms', 'AI &amp; AR Web Experiences', 'Next.js 15 + React 19 Apps', 'Vue 3 / Nuxt 3 Systems', 'Three.js 3D Commerce', 'Accessible UIs at Scale']"
                     :repeat="Infinity" initial-action="erasing" :pre-type-delay="70" :type-delay="70"
                     :pre-erase-delay="2000" :erase-delay="250" erase-style="backspace" caret-animation="smooth"
                     class="color-font fw-600">
@@ -31,7 +32,7 @@
           <ul class="flex">
             <li class="flex">
               <div class="numb valign">
-                <h3>2</h3>
+                <h3>3+</h3>
               </div>
               <div class="text valign">
                 <p>
@@ -42,11 +43,22 @@
 
             <li class="flex">
               <div class="numb valign">
-                <h3>10</h3>
+                <h3>15</h3>
               </div>
               <div class="text valign">
                 <p>
-                  Projects Completed
+                  Production Apps <br /> Shipped
+                </p>
+              </div>
+            </li>
+
+            <li class="flex">
+              <div class="numb valign">
+                <h3>6</h3>
+              </div>
+              <div class="text valign">
+                <p>
+                  Engineers <br /> Led at SIPRC
                 </p>
               </div>
             </li>

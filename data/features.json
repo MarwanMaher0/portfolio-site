@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "icon": "pe-7s-gleam",
-    "title": "Vue.js Development",
-    "content": "Building dynamic and responsive web applications using Vue.js."
+    "icon": "pe-7s-tools",
+    "title": "Enterprise Frontend Architecture",
+    "content": "Designing and shipping production-grade Vue 3 / Nuxt 3 and Next.js 15 / React 19 applications at scale — 307-component IPORA platform live at SIPRC, 552-Vue-file Keme telehealth platform, 4-tier RBAC systems."
   },
   {
     "id": 2,
-    "icon": "pe-7s-phone",
-    "title": "Responsive Design",
-    "content": "Crafting mobile-first designs that provide a seamless user experience across all devices."
+    "icon": "pe-7s-magic-wand",
+    "title": "AI & AR Web Experiences",
+    "content": "TensorFlow.js + MediaPipe Pose for body-tracked AR virtual try-on, Tesseract.js for in-browser Arabic OCR (Cepro.ai), Three.js / WebGL for 3D showrooms and interactive product visualization."
   },
   {
     "id": 3,
-    "icon": "pe-7s-graph1",
-    "title": "API Integration",
-    "content": "Integrating RESTful APIs to enhance the functionality of web applications."
+    "icon": "pe-7s-medal",
+    "title": "Tech Leadership & Quality",
+    "content": "Currently leading 6 engineers across 4 enterprise products at SIPRC. Founded the QA practice from zero — 530+ Selenium test cases across 170+ features, cutting manual regression by 40%."
   },
   {
     "id": 4,
-    "icon": "pe-7s-paint-bucket",
-    "title": "UI/UX Design",
-    "content": "Designing intuitive and visually appealing user interfaces."
+    "icon": "pe-7s-global",
+    "title": "Internationalization & Accessibility",
+    "content": "16-language i18n with full RTL/LTR support, WCAG 2.1 compliant component systems, multi-region e-commerce serving 5 countries with geo-aware routing and dual payment gateways."
   }
 ]
