@@ -86,3 +86,4 @@ bower_components/
 # Tailing spaces
 # Nuxt build output
 .output/
+dist
