@@ -1,0 +1,93 @@
+[
+  {
+    "slug": "ipora",
+    "short": "IPORA",
+    "title": "IPORA — IP management platform",
+    "role": "Sole architect & builder, then Project Manager",
+    "dates": "2025–2026",
+    "problem": "Trademark, patent, copyright and industrial-design portfolios were run from spreadsheets and inboxes.",
+    "did": "Designed and built the platform end to end (Nuxt 3 + TypeScript front end, Django + PostgreSQL back end), bilingual Arabic/English with genuine RTL, role-scoped operations tooling, bilingual PDF portfolio reports for clients; replaced a rejected Power BI build with a custom reporting module; founded the QA practice (530+ Selenium test cases across 170+ features, manual regression down 40%) and wrote 59-page developer docs that halved onboarding; led a cloud migration with zero downtime.",
+    "outcome": "52 services in production; the daily system of record for operations.",
+    "stack": ["Nuxt 3", "TypeScript", "Django", "PostgreSQL", "Playwright", "Selenium", "Docker"],
+    "link": null,
+    "gradient": "linear-gradient(135deg, #12c2e9 0%, #c471ed 100%)"
+  },
+  {
+    "slug": "tm-watch",
+    "short": "TM Watch",
+    "title": "TM Watch — trademark monitoring & opposition tracking",
+    "role": "Project Manager & design lead",
+    "dates": "2026",
+    "problem": "Deciding which of thousands of newly published marks per day actually threaten a client's portfolio, across countries and two scripts, and defending that judgement to a lawyer.",
+    "did": "Ran a four-vendor RFQ, then designed and led the in-house build: a staged funnel — Nice-class filter → vector nearest-neighbour retrieval → composite phonetic/visual/semantic ranking → LLM verdict — judged against historical cases before anyone relied on it.",
+    "outcome": "In production; monitors registries and gazettes across 21 countries with notifications in 12 languages, handling 8,000–20,000 new marks a day.",
+    "stack": ["Python", "Django", "PostgreSQL", "Vector search", "LLM pipelines", "Playwright"],
+    "link": { "label": "Open-source demo of the funnel design", "url": "https://github.com/MarwanMaher0/tm-similarity-funnel" },
+    "gradient": "linear-gradient(135deg, #0f172a 0%, #12c2e9 100%)"
+  },
+  {
+    "slug": "cepro-ai",
+    "short": "Cepro.ai",
+    "title": "Cepro.ai — brand-protection platform site",
+    "role": "Owner of the rebuild, scoping to launch",
+    "dates": "2025",
+    "problem": "Legacy site could not carry a bilingual, AI-led product story.",
+    "did": "Rebuilt on Next.js 15 + React 19 — 17 pages, in-browser Arabic OCR with Tesseract.js, full Arabic/English.",
+    "outcome": "Delivered two weeks early; live.",
+    "stack": ["Next.js 15", "React 19", "TypeScript", "Tesseract.js", "next-intl"],
+    "link": { "label": "cepro.ai", "url": "https://cepro.ai" },
+    "gradient": "linear-gradient(135deg, #c471ed 0%, #f64f59 100%)"
+  },
+  {
+    "slug": "cepro-dashboard",
+    "short": "Cepro Dashboard",
+    "title": "Cepro Dashboard — brand-protection operations",
+    "role": "Built from zero",
+    "dates": "2025",
+    "problem": "Incidents across web, social media, app stores and dark-web sources were tracked by hand with no SLA visibility.",
+    "did": "Built the operations platform — incident intake and evidence, SLA-tracked takedown workflow, role-based access.",
+    "outcome": "In production (login-gated).",
+    "stack": ["Vue 3", "TypeScript", "Django", "PostgreSQL"],
+    "link": null,
+    "gradient": "linear-gradient(135deg, #1e293b 0%, #c471ed 100%)"
+  },
+  {
+    "slug": "digitee",
+    "short": "Digitee",
+    "title": "Digitee — six production apps as sole frontend engineer",
+    "role": "Frontend Engineer, Digitee (Nexxora Holding)",
+    "dates": "2024–2025",
+    "problem": null,
+    "did": "Mintora print-on-demand platform; AR virtual try-on (TensorFlow.js + MediaPipe Pose); Three.js 3D showroom; five-country e-commerce with geo-aware routing, PayPal + Kashier, five languages; B2B dashboard with AI image generation and 16-language i18n with full RTL.",
+    "outcome": null,
+    "stack": ["Vue 3", "Nuxt 3", "TypeScript", "Three.js", "TensorFlow.js", "Tailwind"],
+    "link": null,
+    "gradient": "linear-gradient(135deg, #f64f59 0%, #f9a826 100%)"
+  },
+  {
+    "slug": "keme",
+    "short": "Keme",
+    "title": "Keme — US clinic-management platform",
+    "role": "Frontend Engineer, IDAAM",
+    "dates": "2023–2024",
+    "problem": null,
+    "did": "Built front-end modules for patients, appointments, telehealth and billing in Vue 3 against a Laravel API.",
+    "outcome": null,
+    "stack": ["Vue 3", "Vuetify", "Laravel REST"],
+    "link": null,
+    "gradient": "linear-gradient(135deg, #0ea5a4 0%, #12c2e9 100%)"
+  },
+  {
+    "slug": "freelance",
+    "short": "Freelance",
+    "title": "Freelance — four client projects, requirements to deployment",
+    "role": "Frontend Developer, independent",
+    "dates": "2022–2023",
+    "problem": null,
+    "did": "Climate Risk Assessment Tool (PhD research, Leaflet maps, PDF export); Lusion 3D (Three.js WebGL); fitness e-commerce (Django REST); User Management Dashboard (TypeScript, Cypress E2E, EN/AR RTL).",
+    "outcome": null,
+    "stack": ["Vue", "Three.js", "Leaflet", "Django REST", "Cypress"],
+    "link": null,
+    "gradient": "linear-gradient(135deg, #334155 0%, #64748b 100%)"
+  }
+]

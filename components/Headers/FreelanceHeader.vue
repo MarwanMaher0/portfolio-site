@@ -1,87 +1,61 @@
 <template>
-  <header class="freelancre valign">
+  <header id="Home" class="freelancre hero">
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-lg-4">
           <div class="img">
-            <img src="/img/1711434167660.jpeg" alt="Hero Image" />
+            <img src="/img/1711434167660.jpeg" alt="Marwan Maher" />
           </div>
         </div>
-        <div class="col-lg-8 valign">
+        <div class="col-lg-8">
           <div class="cont">
-            <h1 class="cd-headline clip">
-              Hi, I'm Marwan — Senior Frontend Engineer &amp; Tech Lead at SIPRC. I've shipped 15 production
-              applications in 3 years, leading a team of 6, building
-              <span class="cd-words-wrapper">
-                <ClientOnly>
-                  <AutoTyperVue
-                    :text="['Enterprise SaaS Platforms', 'AI &amp; AR Web Experiences', 'Next.js 15 + React 19 Apps', 'Vue 3 / Nuxt 3 Systems', 'Three.js 3D Commerce', 'Accessible UIs at Scale']"
-                    :repeat="Infinity" initial-action="erasing" :pre-type-delay="70" :type-delay="70"
-                    :pre-erase-delay="2000" :erase-delay="250" erase-style="backspace" caret-animation="smooth"
-                    class="color-font fw-600">
-                  </AutoTyperVue>
-                </ClientOnly>
-              </span>
-            </h1>
+            <p class="hero-kicker">Egypt · Open to remote &amp; relocation (KSA/UAE)</p>
+            <h1>Hi, I'm Marwan — Technical Project Manager &amp; Engineer.</h1>
+            <p class="hero-sub">
+              I run the IT portfolio of a Riyadh IP-services firm: five production systems, from an IP-management
+              platform with 52 live services to a trademark-watch pipeline monitoring registries across 21 countries.
+              I still build — Django, Vue, PostgreSQL, LLM pipelines, Arabic/English RTL.
+            </p>
+            <div class="hero-cta">
+              <a href="#Work" class="butn color radius" @click.prevent="scrollTo('Work')">View work</a>
+              <a href="/Marwan_Maher_Technical_PM_AI.pdf" class="butn bord radius" download>Download CV</a>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="states">
-        <div class="container">
-          <ul class="flex">
-            <li class="flex">
-              <div class="numb valign">
-                <h3>3+</h3>
-              </div>
-              <div class="text valign">
-                <p>
-                  Years <br /> Of Experience
-                </p>
-              </div>
-            </li>
-
-            <li class="flex">
-              <div class="numb valign">
-                <h3>15</h3>
-              </div>
-              <div class="text valign">
-                <p>
-                  Production Apps <br /> Shipped
-                </p>
-              </div>
-            </li>
-
-            <li class="flex">
-              <div class="numb valign">
-                <h3>6</h3>
-              </div>
-              <div class="text valign">
-                <p>
-                  Engineers <br /> Led at SIPRC
-                </p>
-              </div>
-            </li>
-
-            <li class="mail-us">
-              <a href="mailto:marwanmaher635@Gmail.Com?subject=Get in Touch">
-                <div class="flex">
-                  <div class="text valign">
-                    <div class="full-width">
-                      <p>Get In Touch</p>
-                      <h6>Marwanmaher635@Gmail.Com</h6>
-                    </div>
-                  </div>
-                  <div class="mail-icon">
-                    <div class="icon-box">
-                      <span class="icon color-font pe-7s-mail"></span>
-                    </div>
+        <ul class="flex">
+          <li class="flex">
+            <div class="numb valign"><h3>5</h3></div>
+            <div class="text valign"><p>Production systems <br /> owned</p></div>
+          </li>
+          <li class="flex">
+            <div class="numb valign"><h3>52</h3></div>
+            <div class="text valign"><p>Live services <br /> (IPORA)</p></div>
+          </li>
+          <li class="flex">
+            <div class="numb valign"><h3>21</h3></div>
+            <div class="text valign"><p>Countries monitored <br /> (TM Watch)</p></div>
+          </li>
+          <li class="mail-us">
+            <a href="mailto:Marwanmaher635@gmail.com?subject=Hello%20from%20your%20portfolio">
+              <div class="flex">
+                <div class="text valign">
+                  <div class="full-width">
+                    <p>Get in touch</p>
+                    <h6>Marwanmaher635@gmail.com</h6>
                   </div>
                 </div>
-              </a>
-            </li>
-          </ul>
-        </div>
+                <div class="mail-icon">
+                  <div class="icon-box">
+                    <span class="icon color-font pe-7s-mail"></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="line bottom left"></div>
@@ -89,20 +63,139 @@
 </template>
 
 <script setup>
-import { AutoTyperVue } from "auto-typer-vue3";
+function scrollTo(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 
 <style>
-span.right {
-  display: none !important;
+.freelancre.hero {
+  min-height: 0;
+  padding: 140px 0 80px;
 }
 
-span.caret:empty:before {
-  content: "\200B";
-  background: #fff;
-  width: 1px;
-  height: 100%;
-  position: absolute;
-  top: 0;
+.freelancre.hero .img {
+  margin-bottom: 30px;
+}
+
+.freelancre.hero .hero-kicker {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.freelancre.hero .cont h1 {
+  font-size: 40px;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.freelancre.hero .hero-sub {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #333;
+  max-width: 680px;
+  margin-bottom: 30px;
+}
+
+.freelancre.hero .hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.freelancre.hero .hero-cta .butn {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.freelancre.hero .hero-cta .butn.color {
+  color: #fff;
+}
+
+.freelancre.hero .hero-cta .butn.color:hover {
+  color: #111;
+  border-color: #111;
+}
+
+.freelancre.hero .states {
+  position: relative;
+  margin-top: 80px;
+  padding-bottom: 0;
+}
+
+.freelancre.hero .states li {
+  margin-right: 70px;
+}
+
+.freelancre.hero .states li:last-of-type {
+  margin-right: 0;
+}
+
+.freelancre.hero .states li h3 {
+  font-size: 46px;
+}
+
+@media screen and (max-width: 991px) {
+  .freelancre.hero {
+    padding-top: 120px;
+  }
+
+  .freelancre.hero .img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+
+  .freelancre.hero .cont h1 {
+    font-size: 30px;
+  }
+
+  .freelancre.hero .states {
+    margin-top: 60px;
+  }
+
+  .freelancre.hero .states ul.flex {
+    display: block;
+  }
+
+  .freelancre.hero .states ul.flex li {
+    display: flex;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .freelancre.hero .states ul.flex .mail-us {
+    display: block;
+    float: none;
+    margin-bottom: 0;
+  }
+
+  .freelancre.hero .states .mail-us .text {
+    text-align: left;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .freelancre.hero .cont h1 {
+    font-size: 26px;
+  }
+
+  .freelancre.hero .hero-sub {
+    font-size: 15px;
+  }
+
+  .freelancre.hero .states li h3 {
+    font-size: 36px;
+  }
+
+  .freelancre.hero .states .mail-us h6 {
+    word-break: break-all;
+  }
 }
 </style>

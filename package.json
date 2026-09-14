@@ -1,5 +1,5 @@
 {
-  "name": "vie_vue_3",
+  "name": "portfoliov2",
   "private": true,
   "scripts": {
     "build": "nuxt build",

@@ -2,7 +2,7 @@
   <nav ref="navbar" class="navbar navbar-expand-lg change" :class="theme === 'light' ? 'light' : ''">
     <div class="container">
       <NuxtLink to="/" class="">
-        <span>Marwan Maher Mostafa</span>
+        <span>Marwan Maher</span>
       </NuxtLink>
 
       <button class="navbar-toggler" type="button" @click="handleMobileDropdown" data-toggle="collapse"
@@ -15,22 +15,11 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a @click="scrollToSection('Home')" class="nav-link">
-              Home
+          <li v-for="link in links" :key="link.id" class="nav-item">
+            <a :href="`#${link.id}`" class="nav-link" @click.prevent="scrollToSection(link.id)">
+              {{ link.label }}
             </a>
           </li>
-          <li class="nav-item">
-            <a @click="scrollToSection('About')" class="nav-link">
-              About
-            </a>
-          </li>
-          <li class="nav-item">
-            <a @click="scrollToSection('Works')" class="nav-link">
-              Works
-            </a>
-          </li>
-
         </ul>
       </div>
     </div>
@@ -40,7 +29,14 @@
 <script setup>
 import { ref } from 'vue';
 
-const { lr, theme } = defineProps(["lr", "theme"]);
+const { theme } = defineProps(["theme"]);
+
+const links = [
+  { id: 'Home', label: 'Home' },
+  { id: 'How', label: 'How I work' },
+  { id: 'Work', label: 'Work' },
+  { id: 'Contact', label: 'Contact' },
+];
 
 function handleMobileDropdown() {
   document.getElementById("navbarSupportedContent").classList.toggle("show-with-trans");
@@ -51,6 +47,8 @@ function scrollToSection(id) {
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
   }
+  const menu = document.getElementById("navbarSupportedContent");
+  if (menu) menu.classList.remove("show-with-trans");
 }
 
 const navbar = ref();
