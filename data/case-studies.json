@@ -3,7 +3,7 @@
     "slug": "ipora",
     "short": "IPORA",
     "title": "IPORA — IP management platform",
-    "role": "Sole architect & builder, then Project Manager",
+    "role": "Built it end to end, then Project Manager",
     "dates": "2025–2026",
     "problem": "Trademark, patent, copyright and industrial-design portfolios were run from spreadsheets and inboxes.",
     "did": "Designed and built the platform end to end (Nuxt 3 + TypeScript front end, Django + PostgreSQL back end), bilingual Arabic/English with genuine RTL, role-scoped operations tooling, bilingual PDF portfolio reports for clients; replaced a rejected Power BI build with a custom reporting module; founded the QA practice (530+ Selenium test cases across 170+ features, manual regression down 40%) and wrote 59-page developer docs that halved onboarding; led a cloud migration with zero downtime.",
