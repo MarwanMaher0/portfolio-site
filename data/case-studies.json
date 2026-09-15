@@ -79,25 +79,6 @@
     "gradient": "linear-gradient(135deg, #1e293b 0%, #c471ed 100%)"
   },
   {
-    "slug": "qada",
-    "short": "Qada",
-    "title": "Qada — Arabic engineering-projects platform",
-    "role": "Frontend Developer (client project)",
-    "dates": "2023",
-    "problem": "Engineering offices, businesses and members each needed a different view of the same projects, in Arabic.",
-    "did": "Built a 117-component Vue platform, fully right-to-left, with four role-scoped modules — admin, business, engineering offices and members — route guards per role and a service layer per module against a Laravel API.",
-    "outcome": "Delivered as a complete platform, Arabic-first throughout.",
-    "stack": [
-      "Vue 3",
-      "Pinia",
-      "Vue Router",
-      "Axios",
-      "Laravel REST",
-      "RTL"
-    ],
-    "gradient": "linear-gradient(135deg, #4c2a6b 0%, #7b4397 100%)"
-  },
-  {
     "slug": "digitee",
     "short": "Digitee",
     "title": "Digitee — six production apps as sole frontend engineer",
