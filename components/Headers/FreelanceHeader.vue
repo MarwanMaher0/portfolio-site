@@ -13,7 +13,7 @@
             <h1>Hi, I'm Marwan — Technical Project Manager &amp; Engineer.</h1>
             <p class="hero-sub">
               I run the IT portfolio of a Riyadh IP-services firm: five production systems, from an IP-management
-              platform with 52 live services to a trademark-monitoring platform I took from vendor evaluation to in-house build.
+              platform with 52 IP services live to a trademark-monitoring platform I took from vendor evaluation to in-house build.
               I still build — Django, Vue, PostgreSQL, LLM pipelines, Arabic/English RTL.
             </p>
             <div class="hero-cta">
