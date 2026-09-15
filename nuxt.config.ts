@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 const SITE_URL = 'https://marwanmaher.vercel.app';
 const TITLE = 'Marwan Maher — Technical PM & Engineer · IP/Legal-tech · Django · Vue · LLM pipelines';
 const DESCRIPTION =
-  'Technical Project Manager and engineer running the IT portfolio of a Riyadh IP-services firm: five production systems, from an IP-management platform with 52 live services to a trademark-watch pipeline monitoring registries across 21 countries, built with Django, Vue, PostgreSQL and LLM pipelines.';
+  'Technical Project Manager and engineer running the IT portfolio of a Riyadh IP-services firm: five production systems, from an IP-management platform with 52 live services to a trademark-monitoring platform I took from vendor evaluation to in-house build, built with Django, Vue, PostgreSQL and LLM pipelines.';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({

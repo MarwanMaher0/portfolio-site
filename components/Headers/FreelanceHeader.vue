@@ -13,7 +13,7 @@
             <h1>Hi, I'm Marwan — Technical Project Manager &amp; Engineer.</h1>
             <p class="hero-sub">
               I run the IT portfolio of a Riyadh IP-services firm: five production systems, from an IP-management
-              platform with 52 live services to a trademark-watch pipeline monitoring registries across 21 countries.
+              platform with 52 live services to a trademark-monitoring platform I took from vendor evaluation to in-house build.
               I still build — Django, Vue, PostgreSQL, LLM pipelines, Arabic/English RTL.
             </p>
             <div class="hero-cta">
@@ -35,8 +35,8 @@
             <div class="text valign"><p>Live services <br /> (IPORA)</p></div>
           </li>
           <li class="flex">
-            <div class="numb valign"><h3>21</h3></div>
-            <div class="text valign"><p>Countries monitored <br /> (TM Watch)</p></div>
+            <div class="numb valign"><h3>40%</h3></div>
+            <div class="text valign"><p>Manual regression cut <br /> (QA practice)</p></div>
           </li>
           <li class="mail-us">
             <a href="mailto:Marwanmaher635@gmail.com?subject=Hello%20from%20your%20portfolio">
