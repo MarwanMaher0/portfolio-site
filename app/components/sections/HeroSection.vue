@@ -74,6 +74,9 @@ onMounted(async () => {
 
       <div class="hero__photo" data-hero-photo-frame>
         <div class="hero__frame">
+          <svg class="hero__stroke" viewBox="0 0 440 540" preserveAspectRatio="none" aria-hidden="true">
+            <rect x="1" y="1" width="438" height="538" rx="33" fill="none" stroke="var(--accent)" stroke-width="2" pathLength="1" />
+          </svg>
           <AppImage
             class="hero__img" :src="site.person.photo.src" :alt="site.person.photo.alt" eager
             sizes="(max-width: 1023px) 72vw, 34vw"
@@ -106,6 +109,7 @@ onMounted(async () => {
 @keyframes hero-fade { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
   .hero__mask > span, [data-hero-fade] { animation: none; }
+  .hero__stroke rect { animation: none; stroke-dashoffset: 0; }
 }
 .hero__role { font-size: clamp(1.15rem, 1.7vw, 1.4rem); font-weight: 500; }
 .hero__sub { max-width: 52ch; color: var(--ink-2); }
@@ -117,8 +121,11 @@ onMounted(async () => {
 .hero__statLabel { line-height: 1.4; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero__photo { justify-self: end; width: 100%; max-width: 460px; }
-.hero__frame { position: relative; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-gate); aspect-ratio: 44 / 54; margin-top: 9%; }
-.hero__img { position: absolute; left: -2%; bottom: 0; width: 104%; max-width: none; }
+.hero__frame { position: relative; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-gate); aspect-ratio: 44 / 54; margin-top: 7%; }
+.hero__stroke { position: absolute; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px); pointer-events: none; }
+.hero__stroke rect { stroke-dasharray: 1; stroke-dashoffset: 1; animation: hero-stroke 1.5s 0.25s var(--ease-in-out) forwards; }
+@keyframes hero-stroke { to { stroke-dashoffset: 0; } }
+.hero__img { position: absolute; left: 0; right: 0; bottom: 0; margin-inline: auto; height: 107%; width: auto; max-width: none; }
 .hero__scroll { position: absolute; left: var(--gutter); bottom: 32px; display: flex; align-items: center; gap: 14px; }
 .hero__scrollLine { width: 1px; height: 40px; background: var(--ink-2); display: block; }
 @media (max-width: 1023px) {

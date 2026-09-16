@@ -9,10 +9,12 @@ const VISUAL_ORDER = `(el) => {
     for (let i = 0; i < node.data.length; i++) {
       const range = document.createRange()
       range.setStart(node, i); range.setEnd(node, i + 1)
-      chars.push([range.getBoundingClientRect().left, node.data[i]])
+      const rect = range.getBoundingClientRect()
+      // Group by line first: sorting purely by x would interleave wrapped lines.
+      chars.push([Math.round(rect.top / 8), rect.left, node.data[i]])
     }
   }
-  return chars.sort((a, b) => a[0] - b[0]).map((c) => c[1]).join('')
+  return chars.sort((a, b) => a[0] - b[0] || a[1] - b[1]).map((c) => c[2]).join('')
 }`
 
 // Without isolation the browser really does reorder these four values.

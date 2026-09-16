@@ -43,9 +43,11 @@ onBeforeUnmount(() => { observer?.disconnect(); window.clearTimeout(timer) })
   <section :id="data.id" ref="root" class="lab surface" :data-hydrated="hydrated ? 'true' : 'false'">
     <div class="container lab__inner">
       <header class="lab__head">
-        <p class="kicker">{{ data.kicker }}</p>
-        <h2 class="h2">{{ data.title }}</h2>
-        <p class="lead">{{ data.intro }}</p>
+        <div class="lab__headText">
+          <p class="kicker">{{ data.kicker }}</p>
+          <h2 class="h2">{{ data.title }}</h2>
+          <p class="lead">{{ data.intro }}</p>
+        </div>
         <div class="lab__switchRow">
           <button
             class="lab__switch" type="button" role="switch" :aria-checked="isolated"
@@ -98,17 +100,18 @@ onBeforeUnmount(() => { observer?.disconnect(); window.clearTimeout(timer) })
 <style scoped>
 .lab { padding-block: var(--section-pad); }
 .lab__inner { display: flex; flex-direction: column; gap: clamp(28px, 4vw, 52px); }
-.lab__head { display: flex; flex-direction: column; gap: 16px; }
-.lab__switchRow { display: flex; align-items: center; gap: 14px; margin-top: 6px; }
+.lab__head { display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: flex-end; justify-content: space-between; }
+.lab__headText { display: flex; flex-direction: column; gap: 14px; flex: 1 1 520px; }
+.lab__switchRow { display: flex; align-items: center; gap: 14px; flex: none; }
 .lab__switch { width: 64px; height: 34px; border-radius: var(--radius-pill); background: var(--line); position: relative; transition: background var(--dur-base); }
 .lab__switch[aria-checked='true'] { background: var(--accent); }
 .lab__knob { position: absolute; top: 4px; left: 4px; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); transition: transform var(--dur-base) var(--ease-out), background var(--dur-base); }
 .lab__switch[aria-checked='true'] .lab__knob { transform: translateX(30px); background: var(--bg); }
 .lab__switchLabel { font-family: var(--font-mono); font-size: var(--text-mono); letter-spacing: var(--tracking-mono); text-transform: uppercase; color: var(--ink-2); }
-.lab__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(14px, 2vw, 24px); }
+.lab__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: clamp(14px, 2vw, 24px); }
 .lab__card { padding: clamp(18px, 2.2vw, 28px); display: flex; flex-direction: column; gap: 14px; }
 .lab__sentence { font-family: 'IBM Plex Sans Arabic', var(--font-body); font-size: clamp(1.15rem, 1.6vw, 1.6rem); line-height: 1.9; }
-.lab__value { padding-bottom: 2px; }
+.lab__value { padding-bottom: 2px; white-space: nowrap; }
 .lab__value.is-broken { border-bottom: 2px solid var(--accent-2); }
 .lab__value.is-fixed { border-bottom: 2px solid var(--accent); }
 .lab__translation { text-transform: none; }
