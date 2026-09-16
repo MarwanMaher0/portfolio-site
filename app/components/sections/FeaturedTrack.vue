@@ -102,20 +102,25 @@ onBeforeUnmount(() => ctx?.revert())
   /* One screen per panel, so the page is the right height before any script runs. */
   .track { height: calc(100svh + (var(--panels) - 1) * 100vw); }
   .track__viewport { position: sticky; top: 0; height: 100svh; }
+  /* Each panel is exactly one screen: nothing may spill outside the sticky window. */
+  .track__rail { height: 100%; }
+  .panel { height: 100%; min-height: 0; padding: 104px clamp(24px, 5vw, 96px) 80px; }
+  .panel__text { min-height: 0; }
+  .panel__visual { min-height: 0; height: 100%; display: grid; align-items: center; }
 }
 .track__rail { display: flex; }
 .panel {
   flex: none; width: 100vw; min-height: 100svh; display: grid; grid-template-columns: 40fr 60fr;
   gap: clamp(24px, 4vw, 72px); align-items: center; padding: 120px clamp(24px, 5vw, 96px) 96px;
 }
-.panel__text { display: flex; flex-direction: column; gap: 14px; }
+.panel__text { display: flex; flex-direction: column; gap: clamp(8px, 1.4vh, 14px); }
 .panel__title { font-size: var(--text-h2); }
 .panel__subtitle { font-size: var(--text-lead); color: var(--ink-2); }
 .panel__meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .panel__access { font-size: 10px; padding: 4px 10px; }
 .panel__metrics { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 4px; }
 .panel__metrics li { display: flex; flex-direction: column; gap: 4px; max-width: 150px; }
-.panel__metricValue { font-family: var(--font-display); font-size: 1.9rem; line-height: 1; }
+.panel__metricValue { font-family: var(--font-display); font-size: clamp(1.4rem, 1.9vh, 1.9rem); line-height: 1; }
 .panel__stack { display: flex; flex-wrap: wrap; gap: 8px; }
 .panel__cta { display: inline-block; margin-top: 8px; color: var(--accent); font-weight: 600; }
 .panel__visual { display: block; }

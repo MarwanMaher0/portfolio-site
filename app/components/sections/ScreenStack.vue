@@ -61,7 +61,7 @@ onBeforeUnmount(() => ctx?.revert())
 </template>
 
 <style scoped>
-.stack { position: relative; perspective: 1400px; width: 100%; aspect-ratio: 16 / 11; }
+.stack { position: relative; perspective: 1400px; width: 100%; aspect-ratio: 16 / 11; max-height: 100%; }
 .stack__card {
   position: absolute; inset: 0; margin: auto; width: 92%; height: fit-content;
   border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--line);
