@@ -1,0 +1,596 @@
+{
+  "_rules": "Every word here is confirmed. Use it verbatim or shorten it; never add facts. Internal products are described at the level of role and outcome only. Only the images listed are allowed; never mock up, recreate or imagine a screen of an internal product.",
+  "featured": [
+    {
+      "slug": "ipora",
+      "title": "IPORA",
+      "subtitle": "IP-management platform",
+      "org": "SIPRC",
+      "role": "Built it end to end, then Project Manager",
+      "dates": "2025 – 2026",
+      "access": "Internal · login-gated",
+      "phase": "ship",
+      "summary": "The operations team's daily system of record, with 52 IP services live.",
+      "problem": "Trademark, patent, copyright and industrial-design portfolios were run from spreadsheets and inboxes.",
+      "did": [
+        "Built the platform end to end on a commercial admin base: data model, modules, role-scoped access and backend integration.",
+        "Bilingual Arabic/English with genuine right-to-left layouts.",
+        "After the business rejected a completed Power BI build, re-scoped reporting as a custom module.",
+        "Founded the QA practice: 530+ automated Selenium test cases across 170+ features, cutting manual regression by 40%.",
+        "Wrote 59 pages of developer documentation that halved onboarding.",
+        "Led a cloud migration with zero downtime."
+      ],
+      "outcome": "52 IP services live; the operations team's daily system of record.",
+      "metrics": [
+        {
+          "value": "52",
+          "label": "IP services live"
+        },
+        {
+          "value": "530+",
+          "label": "automated test cases"
+        },
+        {
+          "value": "40%",
+          "label": "less manual regression"
+        },
+        {
+          "value": "0",
+          "label": "downtime in the cloud migration"
+        }
+      ],
+      "stack": [
+        "Nuxt 3",
+        "TypeScript",
+        "Django",
+        "PostgreSQL",
+        "Selenium",
+        "Playwright",
+        "Docker"
+      ],
+      "links": [],
+      "note": "Internal product. Only its public sign-in screen is shown.",
+      "images": [
+        {
+          "src": "/work/ipora/01-ipora-ai-home-desktop.webp",
+          "kind": "desktop",
+          "alt": "IPORA sign-in screen: 'Intellectual Property Portfolio Integrated Digital Solution', with an email and password form"
+        },
+        {
+          "src": "/work/ipora/02-ipora-ai-home-mobile.webp",
+          "kind": "mobile",
+          "alt": "IPORA sign-in screen on a phone"
+        }
+      ]
+    },
+    {
+      "slug": "trademark-monitoring",
+      "title": "Trademark monitoring",
+      "subtitle": "From vendor evaluation to an in-house build",
+      "org": "SIPRC",
+      "role": "Project Manager",
+      "dates": "2026",
+      "access": "Internal",
+      "phase": "decide",
+      "summary": "Four vendors evaluated, one build-vs-buy call, and an in-house build now in production.",
+      "problem": "Watching for conflicting trademarks by hand did not scale with the portfolio.",
+      "did": [
+        "Wrote the requirements the vendors were judged against.",
+        "Ran a four-vendor evaluation and made the build-vs-buy call.",
+        "Led the in-house build with the team and reported progress to management.",
+        "Made validation against historical outcomes a rollout gate for model output that drives a legal recommendation."
+      ],
+      "outcome": "In production.",
+      "metrics": [
+        {
+          "value": "4",
+          "label": "vendors evaluated"
+        }
+      ],
+      "stack": [
+        "Requirements",
+        "Vendor evaluation",
+        "Python",
+        "Django",
+        "PostgreSQL"
+      ],
+      "links": [],
+      "note": "Internal product. No screenshots: this card uses a typographic panel.",
+      "images": []
+    },
+    {
+      "slug": "siprc-sa",
+      "title": "siprc.sa",
+      "subtitle": "Company website and AI assistant",
+      "org": "SIPRC",
+      "role": "Built it",
+      "dates": "2025 – 2026",
+      "access": "Live",
+      "phase": "ship",
+      "summary": "The company's public website in Arabic and English, with an AI customer-support assistant.",
+      "problem": null,
+      "did": [
+        "Built the public website in Arabic and English.",
+        "Built its AI customer-support assistant for visitors.",
+        "Scroll-driven motion with GSAP."
+      ],
+      "outcome": "Live at siprc.sa.",
+      "metrics": [],
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "GSAP",
+        "Arabic/English RTL",
+        "AI assistant"
+      ],
+      "links": [
+        {
+          "label": "siprc.sa",
+          "href": "https://www.siprc.sa"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/siprc-sa/01-siprc-sa-home-desktop.webp",
+          "kind": "desktop",
+          "alt": "siprc.sa home page in English: 'Saudi Intellectual Property Rights Company' beside a photo of a consultant"
+        },
+        {
+          "src": "/work/siprc-sa/02-siprc-sa-home-desktop-ar.webp",
+          "kind": "desktop",
+          "alt": "siprc.sa home page in Arabic, laid out right to left"
+        },
+        {
+          "src": "/work/siprc-sa/04-siprc-sa-ai-agent-open.webp",
+          "kind": "desktop",
+          "alt": "siprc.sa with the AI assistant panel open, offering quick actions such as requesting a service"
+        },
+        {
+          "src": "/work/siprc-sa/03-siprc-sa-home-mobile.webp",
+          "kind": "mobile",
+          "alt": "siprc.sa home page on a phone"
+        }
+      ]
+    },
+    {
+      "slug": "cepro",
+      "title": "Cepro",
+      "subtitle": "Brand-protection site and operations dashboard",
+      "org": "Cepro (SIPRC group)",
+      "role": "Contractor, then full-time; later owned the cepro.ai rebuild from SIPRC",
+      "dates": "2025 – 2026",
+      "access": "Site live · dashboard internal",
+      "phase": "ship",
+      "summary": "Built the operations dashboard from zero, then rebuilt cepro.ai and delivered it two weeks early.",
+      "problem": null,
+      "did": [
+        "Built the Cepro brand-protection dashboard from zero in Vue 3 and Django: role-based access and SLA-tracked takedown workflows.",
+        "Owned the cepro.ai rebuild on Next.js 15 and React 19: 17 pages, full Arabic and English, and in-browser Arabic OCR with Tesseract.js.",
+        "Delivered the rebuild two weeks early."
+      ],
+      "outcome": "cepro.ai is live; the dashboard is in production.",
+      "metrics": [
+        {
+          "value": "17",
+          "label": "pages rebuilt"
+        },
+        {
+          "value": "2 weeks",
+          "label": "early"
+        }
+      ],
+      "stack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tesseract.js",
+        "next-intl",
+        "Vue 3",
+        "Django"
+      ],
+      "links": [
+        {
+          "label": "cepro.ai",
+          "href": "https://cepro.ai"
+        }
+      ],
+      "note": "The dashboard is internal and not shown.",
+      "images": [
+        {
+          "src": "/work/cepro-ai/01-cepro-ai-home-desktop.webp",
+          "kind": "desktop",
+          "alt": "cepro.ai home page in English: 'Your brand is under attack. We make it defensible.'"
+        },
+        {
+          "src": "/work/cepro-ai/02-cepro-ai-home-ar.webp",
+          "kind": "desktop",
+          "alt": "cepro.ai home page in Arabic, laid out right to left"
+        },
+        {
+          "src": "/work/cepro-ai/03-cepro-ai-home-section2.webp",
+          "kind": "desktop",
+          "alt": "cepro.ai section explaining why digital brand abuse is a business problem"
+        },
+        {
+          "src": "/work/cepro-ai/04-cepro-ai-home-mobile.webp",
+          "kind": "mobile",
+          "alt": "cepro.ai home page on a phone"
+        }
+      ]
+    },
+    {
+      "slug": "nexxora",
+      "title": "Nexxora group",
+      "subtitle": "Digitee, Mintora and Lovaa",
+      "org": "Digitee (Nexxora Holding)",
+      "role": "Frontend Engineer, sole frontend engineer",
+      "dates": "2024 – 2025",
+      "access": "Production apps",
+      "phase": "ship",
+      "summary": "Six production apps from zero to launch, from a Three.js showroom to AR virtual try-on.",
+      "problem": null,
+      "did": [
+        "Digitee.io marketing site with a Three.js 3D showroom, a 3D virtual try-on and AR sizing (TensorFlow.js, MediaPipe Pose).",
+        "DigiTee NFT marketplace: minting, profiles, a DGT token dashboard and the Digi assistant.",
+        "Mintora print-on-demand store and its design lab.",
+        "Five-country e-commerce with geo-aware routing, PayPal and Kashier, and five languages.",
+        "Digitee Business B2B dashboard, later Lovaa, with AI image generation; extended a multi-locale setup to 16 languages with full RTL.",
+        "Sales, fulfilment and carrier admin tools, and the Nexxora company site."
+      ],
+      "outcome": "Six production apps launched.",
+      "metrics": [
+        {
+          "value": "6",
+          "label": "production apps"
+        },
+        {
+          "value": "16",
+          "label": "languages, full RTL"
+        },
+        {
+          "value": "5",
+          "label": "countries of e-commerce"
+        }
+      ],
+      "stack": [
+        "Vue 3",
+        "Nuxt 3",
+        "TypeScript",
+        "Three.js",
+        "TensorFlow.js",
+        "MediaPipe",
+        "Tailwind"
+      ],
+      "links": [],
+      "galleries": [
+        {
+          "label": "Digitee.io",
+          "images": [
+            {
+              "src": "/work/digitee-site/02-digitee-threejs-3d-showroom-stage.webp",
+              "kind": "desktop",
+              "alt": "Digitee Three.js 3D showroom: a glowing magenta stage"
+            },
+            {
+              "src": "/work/digitee-site/03-digitee-3d-virtual-try-on-dress.webp",
+              "kind": "desktop",
+              "alt": "Digitee 3D virtual try-on showing a dress on a grid floor"
+            },
+            {
+              "src": "/work/digitee-site/01-digitee-landing-hero-born-from-innovation.webp",
+              "kind": "desktop",
+              "alt": "Digitee landing hero: a hooded figure and the words 'Born from innovation'"
+            },
+            {
+              "src": "/work/digitee-site/04-digitee-wear-your-nft-3d-card.webp",
+              "kind": "desktop",
+              "alt": "Digitee 'From digital to reality: wear your NFT' section with a 3D card"
+            },
+            {
+              "src": "/work/digitee-site/05-digitee-mission-section-crystals.webp",
+              "kind": "desktop",
+              "alt": "Digitee mission section, 'Redefining fashion for the digital age', with floating crystals"
+            },
+            {
+              "src": "/work/digitee-site/06-digitee-story-orb-scroll-section.webp",
+              "kind": "desktop",
+              "alt": "Digitee scroll section 'Where your story begins' with a glowing purple orb"
+            },
+            {
+              "src": "/work/digitee-site/07-digitee-main-platform.webp",
+              "kind": "desktop",
+              "alt": "Digitee main platform hero with a figure in a neon-lit scene"
+            },
+            {
+              "src": "/work/digitee-site/08-digitee-ecommerce.webp",
+              "kind": "desktop",
+              "alt": "Digitee e-commerce hero: 'Galaxy Gear' with a model in a reflective hood"
+            }
+          ]
+        },
+        {
+          "label": "NFT marketplace",
+          "images": [
+            {
+              "src": "/work/digitee-nft/01-digitee-token.webp",
+              "kind": "desktop",
+              "alt": "DigiTee DGT token dashboard with holdings and statistics"
+            },
+            {
+              "src": "/work/digitee-nft/03-digitee-tee-nft-3d-product-viewer.webp",
+              "kind": "desktop",
+              "alt": "DigiTee 3D product viewer showing a T-shirt NFT"
+            },
+            {
+              "src": "/work/digitee-nft/04-digitee-nft-3d-hoodie-product-viewer.webp",
+              "kind": "desktop",
+              "alt": "DigiTee 3D product viewer showing a hoodie NFT, 'Nova Niche'"
+            },
+            {
+              "src": "/work/digitee-nft/02-digitee-digi-ai-assistant-chat.webp",
+              "kind": "desktop",
+              "alt": "Digi, the DigiTee AI assistant, greeting the user in a chat window"
+            },
+            {
+              "src": "/work/digitee-nft/05-digitee-nft-mint-upload-page.webp",
+              "kind": "desktop",
+              "alt": "DigiTee NFT minting page with a file upload area"
+            }
+          ]
+        },
+        {
+          "label": "Mintora",
+          "images": [
+            {
+              "src": "/work/mintora/01-mintora-choose-design-method.webp",
+              "kind": "desktop",
+              "alt": "Mintora: choose how to create a T-shirt design, by describing it or designing with AI"
+            },
+            {
+              "src": "/work/mintora/02-mintora-product-page-customize.webp",
+              "kind": "desktop",
+              "alt": "Mintora product page for a printed T-shirt with size, gender and colour options"
+            },
+            {
+              "src": "/work/mintora/03-mintora-ready-made-designs-grid.webp",
+              "kind": "desktop",
+              "alt": "Mintora grid of ready-made T-shirt designs"
+            },
+            {
+              "src": "/work/mintora/04-mintora-how-it-works-wearable-art.webp",
+              "kind": "desktop",
+              "alt": "Mintora 'Wearable art made effortless' three-step explainer"
+            },
+            {
+              "src": "/work/mintora/05-06-generated-hoodie-mockup.webp",
+              "kind": "desktop",
+              "alt": "Mintora design lab output: a generated hoodie mockup on a mannequin"
+            }
+          ]
+        },
+        {
+          "label": "Lovaa",
+          "images": [
+            {
+              "src": "/work/lovaa/01-digitee-b2b-lovaa.webp",
+              "kind": "desktop",
+              "alt": "Lovaa B2B landing page: 'Power your platform with our AI-driven solutions'"
+            },
+            {
+              "src": "/work/lovaa/02-digitee-b2b-dashboard.webp",
+              "kind": "desktop",
+              "alt": "Lovaa dashboard with token balance, usage cards and an API token usage chart"
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/digitee-site/02-digitee-threejs-3d-showroom-stage.webp",
+          "kind": "desktop",
+          "alt": "Digitee Three.js 3D showroom: a glowing magenta stage"
+        }
+      ]
+    }
+  ],
+  "more": [
+    {
+      "slug": "tibyn",
+      "title": "Tibyn",
+      "subtitle": "UI/UX audit remediation",
+      "org": "Freelance, for Nobel Business",
+      "role": "Frontend engineer, audit remediation",
+      "dates": "Aug – Sep 2026",
+      "summary": "Closed 41 of 44 UI/UX audit findings on an aquaculture farm-management SaaS, with no regressions.",
+      "did": [
+        "Closed 41 of 44 UI/UX audit findings with shipped fixes.",
+        "Reproduced every issue in a real browser before fixing it.",
+        "Grew the frontend test suite from 413 to 436 tests, with no regressions."
+      ],
+      "note": "The product was built by others; my work was the audit remediation.",
+      "metrics": [
+        {
+          "value": "41 / 44",
+          "label": "findings closed"
+        },
+        {
+          "value": "413 → 436",
+          "label": "frontend tests"
+        }
+      ],
+      "stack": [
+        "Front-end",
+        "UI/UX",
+        "Regression testing"
+      ],
+      "links": [
+        {
+          "label": "tibyn.ai",
+          "href": "https://tibyn.ai"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/tibyn/01-tibyn-ai-home-desktop.webp",
+          "kind": "desktop",
+          "alt": "Tibyn Aquaculture Platform sign-in screen"
+        }
+      ]
+    },
+    {
+      "slug": "keme",
+      "title": "Keme",
+      "subtitle": "US clinic-management platform",
+      "org": "IDAAM",
+      "role": "Frontend Engineer",
+      "dates": "2023 – 2024",
+      "summary": "Front-end modules for patients, appointments, telehealth and billing.",
+      "did": [
+        "Built front-end modules for patients, appointments, telehealth and billing in Vue 3, against a Laravel REST API."
+      ],
+      "stack": [
+        "Vue 3",
+        "Vuetify",
+        "Laravel REST"
+      ],
+      "links": [],
+      "images": [
+        {
+          "src": "/work/keme/01-IDAAM-keme.webp",
+          "kind": "desktop",
+          "alt": "Keme home page: 'Search provider, make an appointment', with clinic specialities"
+        }
+      ]
+    },
+    {
+      "slug": "safeme",
+      "title": "SafeMe",
+      "subtitle": "Hide sensitive data in images, documents and video",
+      "org": "Side project",
+      "role": "Built it",
+      "dates": "2024",
+      "summary": "An AI tool that detects sensitive information and obscures it before a file is shared.",
+      "did": [
+        "Works on uploaded images and documents, and in real time on live webcam video.",
+        "Guided flow: obscure data or retrieve previously encrypted data, pick the kind of information to protect, and choose how to obscure it."
+      ],
+      "stack": [
+        "AI",
+        "Web app"
+      ],
+      "links": [],
+      "images": [
+        {
+          "src": "/work/safeme/01-safeme-choose-obscure-or-retrieve-en.webp",
+          "kind": "desktop",
+          "alt": "SafeMe: choose between obscuring sensitive data and retrieving encrypted data"
+        },
+        {
+          "src": "/work/safeme/02-safeme-obscure-sensitive-data-form-en.webp",
+          "kind": "desktop",
+          "alt": "SafeMe form: document type, file type, obscuring method and metadata options"
+        },
+        {
+          "src": "/work/safeme/03-safeme-upload-file-step-en.webp",
+          "kind": "desktop",
+          "alt": "SafeMe upload step with a drag-and-drop area"
+        },
+        {
+          "src": "/work/safeme/04-safeme-webcam-realtime-obscure-section-en.webp",
+          "kind": "desktop",
+          "alt": "SafeMe section inviting the user to obscure sensitive information on a live webcam"
+        }
+      ]
+    },
+    {
+      "slug": "resilience-scale",
+      "title": "Resilience Scale for Schools",
+      "subtitle": "Design-criteria tool for school buildings",
+      "org": "Freelance, for academic researchers",
+      "role": "Built it",
+      "dates": "Dec 2023 – Jul 2024",
+      "summary": "An interactive Arabic/English design-criteria matrix for school buildings.",
+      "did": [
+        "Criteria organised by type of space: external educational spaces, classrooms, servant spaces and residential spaces.",
+        "Arabic and English, with print output and a QR code for printed material."
+      ],
+      "stack": [
+        "Vue",
+        "Arabic/English RTL",
+        "Print"
+      ],
+      "links": [
+        {
+          "label": "Live site",
+          "href": "https://resilience-scale-for-schools.vercel.app"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/resilience-scale/01-resilience-scale-home-desktop.webp",
+          "kind": "desktop",
+          "alt": "Resilience Scale for Schools home page with categories of school spaces"
+        },
+        {
+          "src": "/work/resilience-scale/02-resilience-scale-home-section2.webp",
+          "kind": "desktop",
+          "alt": "Resilience Scale for Schools section with a QR code"
+        }
+      ]
+    },
+    {
+      "slug": "freelance",
+      "title": "Freelance client work",
+      "subtitle": "Requirements to deployment",
+      "org": "Independent",
+      "role": "Frontend Developer",
+      "dates": "2022 – 2023",
+      "summary": "Client projects delivered from requirements to deployment.",
+      "did": [
+        "A climate risk assessment tool for PhD research, with Leaflet maps and PDF export.",
+        "A fitness e-commerce site with a Django REST backend.",
+        "A user-management dashboard with role-based permissions and English/Arabic RTL, tested end to end with Cypress."
+      ],
+      "stack": [
+        "Vue",
+        "Leaflet",
+        "Django REST",
+        "TypeScript",
+        "Cypress"
+      ],
+      "links": [],
+      "images": [
+        {
+          "src": "/work/freelance/01-freelance-climate-risk.webp",
+          "kind": "desktop",
+          "alt": "Climate Change Risk Resilience Platform landing page over a historic university building"
+        },
+        {
+          "src": "/work/freelance/02-freelance-gym.webp",
+          "kind": "desktop",
+          "alt": "Gym storefront hero: 'Every great journey starts with one step'"
+        }
+      ]
+    }
+  ],
+  "teaching": {
+    "slug": "workshop",
+    "title": "From Requirements to Clean Code",
+    "subtitle": "Workshop on the front-end project lifecycle",
+    "dates": "December 2025",
+    "summary": "A workshop and slide deck for students, graduates and freelancers on taking a front-end project from requirements to clean code.",
+    "links": [
+      {
+        "label": "Slides",
+        "href": "https://devfist.vercel.app"
+      }
+    ],
+    "images": [
+      {
+        "src": "/work/workshop/01-devfist-workshop-desktop.webp",
+        "kind": "desktop",
+        "alt": "Title slide: 'From Requirements to Clean Code', a front-end project lifecycle workshop"
+      }
+    ]
+  }
+}

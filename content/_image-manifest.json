@@ -1,0 +1,884 @@
+{
+ "siprc-sa": [
+  {
+   "file": "01-siprc-sa-home-desktop",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/siprc-sa/01-siprc-sa-home-desktop.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 59
+    },
+    {
+     "src": "/work/siprc-sa/01-siprc-sa-home-desktop@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 26
+    }
+   ]
+  },
+  {
+   "file": "02-siprc-sa-home-desktop-ar",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/siprc-sa/02-siprc-sa-home-desktop-ar.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 58
+    },
+    {
+     "src": "/work/siprc-sa/02-siprc-sa-home-desktop-ar@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 25
+    }
+   ]
+  },
+  {
+   "file": "03-siprc-sa-home-mobile",
+   "kind": "mobile",
+   "variants": [
+    {
+     "src": "/work/siprc-sa/03-siprc-sa-home-mobile.webp",
+     "width": 780,
+     "height": 1688,
+     "kb": 58
+    },
+    {
+     "src": "/work/siprc-sa/03-siprc-sa-home-mobile@390w.webp",
+     "width": 390,
+     "height": 844,
+     "kb": 27
+    }
+   ]
+  },
+  {
+   "file": "04-siprc-sa-ai-agent-open",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/siprc-sa/04-siprc-sa-ai-agent-open.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 56
+    },
+    {
+     "src": "/work/siprc-sa/04-siprc-sa-ai-agent-open@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 24
+    }
+   ]
+  }
+ ],
+ "ipora": [
+  {
+   "file": "01-ipora-ai-home-desktop",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/ipora/01-ipora-ai-home-desktop.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 33
+    },
+    {
+     "src": "/work/ipora/01-ipora-ai-home-desktop@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 13
+    }
+   ]
+  },
+  {
+   "file": "02-ipora-ai-home-mobile",
+   "kind": "mobile",
+   "variants": [
+    {
+     "src": "/work/ipora/02-ipora-ai-home-mobile.webp",
+     "width": 780,
+     "height": 1688,
+     "kb": 48
+    },
+    {
+     "src": "/work/ipora/02-ipora-ai-home-mobile@390w.webp",
+     "width": 390,
+     "height": 844,
+     "kb": 23
+    }
+   ]
+  }
+ ],
+ "cepro-ai": [
+  {
+   "file": "01-cepro-ai-home-desktop",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/cepro-ai/01-cepro-ai-home-desktop.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 54
+    },
+    {
+     "src": "/work/cepro-ai/01-cepro-ai-home-desktop@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 20
+    }
+   ]
+  },
+  {
+   "file": "02-cepro-ai-home-ar",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/cepro-ai/02-cepro-ai-home-ar.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 47
+    },
+    {
+     "src": "/work/cepro-ai/02-cepro-ai-home-ar@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 18
+    }
+   ]
+  },
+  {
+   "file": "03-cepro-ai-home-section2",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/cepro-ai/03-cepro-ai-home-section2.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 57
+    },
+    {
+     "src": "/work/cepro-ai/03-cepro-ai-home-section2@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 22
+    }
+   ]
+  },
+  {
+   "file": "04-cepro-ai-home-mobile",
+   "kind": "mobile",
+   "variants": [
+    {
+     "src": "/work/cepro-ai/04-cepro-ai-home-mobile.webp",
+     "width": 780,
+     "height": 1688,
+     "kb": 65
+    },
+    {
+     "src": "/work/cepro-ai/04-cepro-ai-home-mobile@390w.webp",
+     "width": 390,
+     "height": 844,
+     "kb": 30
+    }
+   ]
+  }
+ ],
+ "digitee-site": [
+  {
+   "file": "01-digitee-landing-hero-born-from-innovation",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-site/01-digitee-landing-hero-born-from-innovation.webp",
+     "width": 1157,
+     "height": 646,
+     "kb": 28
+    },
+    {
+     "src": "/work/digitee-site/01-digitee-landing-hero-born-from-innovation@800w.webp",
+     "width": 800,
+     "height": 447,
+     "kb": 18
+    }
+   ]
+  },
+  {
+   "file": "02-digitee-threejs-3d-showroom-stage",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-site/02-digitee-threejs-3d-showroom-stage.webp",
+     "width": 1600,
+     "height": 772,
+     "kb": 60
+    },
+    {
+     "src": "/work/digitee-site/02-digitee-threejs-3d-showroom-stage@800w.webp",
+     "width": 800,
+     "height": 386,
+     "kb": 27
+    }
+   ]
+  },
+  {
+   "file": "03-digitee-3d-virtual-try-on-dress",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-site/03-digitee-3d-virtual-try-on-dress.webp",
+     "width": 1600,
+     "height": 772,
+     "kb": 27
+    },
+    {
+     "src": "/work/digitee-site/03-digitee-3d-virtual-try-on-dress@800w.webp",
+     "width": 800,
+     "height": 386,
+     "kb": 9
+    }
+   ]
+  },
+  {
+   "file": "04-digitee-wear-your-nft-3d-card",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-site/04-digitee-wear-your-nft-3d-card.webp",
+     "width": 1600,
+     "height": 772,
+     "kb": 23
+    },
+    {
+     "src": "/work/digitee-site/04-digitee-wear-your-nft-3d-card@800w.webp",
+     "width": 800,
+     "height": 386,
+     "kb": 10
+    }
+   ]
+  },
+  {
+   "file": "05-digitee-mission-section-crystals",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-site/05-digitee-mission-section-crystals.webp",
+     "width": 1200,
+     "height": 672,
+     "kb": 35
+    },
+    {
+     "src": "/work/digitee-site/05-digitee-mission-section-crystals@800w.webp",
+     "width": 800,
+     "height": 448,
+     "kb": 21
+    }
+   ]
+  },
+  {
+   "file": "06-digitee-story-orb-scroll-section",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-site/06-digitee-story-orb-scroll-section.webp",
+     "width": 1103,
+     "height": 546,
+     "kb": 27
+    },
+    {
+     "src": "/work/digitee-site/06-digitee-story-orb-scroll-section@800w.webp",
+     "width": 800,
+     "height": 396,
+     "kb": 17
+    }
+   ]
+  },
+  {
+   "file": "07-digitee-main-platform",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-site/07-digitee-main-platform.webp",
+     "width": 1600,
+     "height": 900,
+     "kb": 37
+    },
+    {
+     "src": "/work/digitee-site/07-digitee-main-platform@800w.webp",
+     "width": 800,
+     "height": 450,
+     "kb": 16
+    }
+   ]
+  },
+  {
+   "file": "08-digitee-ecommerce",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-site/08-digitee-ecommerce.webp",
+     "width": 1600,
+     "height": 900,
+     "kb": 53
+    },
+    {
+     "src": "/work/digitee-site/08-digitee-ecommerce@800w.webp",
+     "width": 800,
+     "height": 450,
+     "kb": 21
+    }
+   ]
+  }
+ ],
+ "digitee-nft": [
+  {
+   "file": "01-digitee-token",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-nft/01-digitee-token.webp",
+     "width": 1600,
+     "height": 1056,
+     "kb": 63
+    },
+    {
+     "src": "/work/digitee-nft/01-digitee-token@800w.webp",
+     "width": 800,
+     "height": 528,
+     "kb": 27
+    }
+   ]
+  },
+  {
+   "file": "02-digitee-digi-ai-assistant-chat",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-nft/02-digitee-digi-ai-assistant-chat.webp",
+     "width": 1155,
+     "height": 722,
+     "kb": 17
+    },
+    {
+     "src": "/work/digitee-nft/02-digitee-digi-ai-assistant-chat@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 10
+    }
+   ]
+  },
+  {
+   "file": "03-digitee-tee-nft-3d-product-viewer",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-nft/03-digitee-tee-nft-3d-product-viewer.webp",
+     "width": 1600,
+     "height": 772,
+     "kb": 23
+    },
+    {
+     "src": "/work/digitee-nft/03-digitee-tee-nft-3d-product-viewer@800w.webp",
+     "width": 800,
+     "height": 386,
+     "kb": 10
+    }
+   ]
+  },
+  {
+   "file": "04-digitee-nft-3d-hoodie-product-viewer",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-nft/04-digitee-nft-3d-hoodie-product-viewer.webp",
+     "width": 1600,
+     "height": 799,
+     "kb": 23
+    },
+    {
+     "src": "/work/digitee-nft/04-digitee-nft-3d-hoodie-product-viewer@800w.webp",
+     "width": 800,
+     "height": 400,
+     "kb": 9
+    }
+   ]
+  },
+  {
+   "file": "05-digitee-nft-mint-upload-page",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/digitee-nft/05-digitee-nft-mint-upload-page.webp",
+     "width": 1046,
+     "height": 842,
+     "kb": 22
+    },
+    {
+     "src": "/work/digitee-nft/05-digitee-nft-mint-upload-page@800w.webp",
+     "width": 800,
+     "height": 644,
+     "kb": 15
+    }
+   ]
+  }
+ ],
+ "mintora": [
+  {
+   "file": "01-mintora-choose-design-method",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/mintora/01-mintora-choose-design-method.webp",
+     "width": 1192,
+     "height": 748,
+     "kb": 31
+    },
+    {
+     "src": "/work/mintora/01-mintora-choose-design-method@800w.webp",
+     "width": 800,
+     "height": 502,
+     "kb": 18
+    }
+   ]
+  },
+  {
+   "file": "02-mintora-product-page-customize",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/mintora/02-mintora-product-page-customize.webp",
+     "width": 1069,
+     "height": 706,
+     "kb": 41
+    },
+    {
+     "src": "/work/mintora/02-mintora-product-page-customize@800w.webp",
+     "width": 800,
+     "height": 528,
+     "kb": 27
+    }
+   ]
+  },
+  {
+   "file": "03-mintora-ready-made-designs-grid",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/mintora/03-mintora-ready-made-designs-grid.webp",
+     "width": 1070,
+     "height": 806,
+     "kb": 47
+    },
+    {
+     "src": "/work/mintora/03-mintora-ready-made-designs-grid@800w.webp",
+     "width": 800,
+     "height": 603,
+     "kb": 30
+    }
+   ]
+  },
+  {
+   "file": "04-mintora-how-it-works-wearable-art",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/mintora/04-mintora-how-it-works-wearable-art.webp",
+     "width": 1059,
+     "height": 634,
+     "kb": 39
+    },
+    {
+     "src": "/work/mintora/04-mintora-how-it-works-wearable-art@800w.webp",
+     "width": 800,
+     "height": 479,
+     "kb": 26
+    }
+   ]
+  },
+  {
+   "file": "05-06-generated-hoodie-mockup",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/mintora/05-06-generated-hoodie-mockup.webp",
+     "width": 1600,
+     "height": 1600,
+     "kb": 73
+    },
+    {
+     "src": "/work/mintora/05-06-generated-hoodie-mockup@800w.webp",
+     "width": 800,
+     "height": 800,
+     "kb": 19
+    }
+   ]
+  }
+ ],
+ "lovaa": [
+  {
+   "file": "01-digitee-b2b-lovaa",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/lovaa/01-digitee-b2b-lovaa.webp",
+     "width": 1600,
+     "height": 1058,
+     "kb": 46
+    },
+    {
+     "src": "/work/lovaa/01-digitee-b2b-lovaa@800w.webp",
+     "width": 800,
+     "height": 529,
+     "kb": 23
+    }
+   ]
+  },
+  {
+   "file": "02-digitee-b2b-dashboard",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/lovaa/02-digitee-b2b-dashboard.webp",
+     "width": 1600,
+     "height": 900,
+     "kb": 53
+    },
+    {
+     "src": "/work/lovaa/02-digitee-b2b-dashboard@800w.webp",
+     "width": 800,
+     "height": 450,
+     "kb": 23
+    }
+   ]
+  }
+ ],
+ "keme": [
+  {
+   "file": "01-IDAAM-keme",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/keme/01-IDAAM-keme.webp",
+     "width": 1600,
+     "height": 900,
+     "kb": 55
+    },
+    {
+     "src": "/work/keme/01-IDAAM-keme@800w.webp",
+     "width": 800,
+     "height": 450,
+     "kb": 23
+    }
+   ]
+  }
+ ],
+ "safeme": [
+  {
+   "file": "01-safeme-choose-obscure-or-retrieve-en",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/safeme/01-safeme-choose-obscure-or-retrieve-en.webp",
+     "width": 1600,
+     "height": 799,
+     "kb": 65
+    },
+    {
+     "src": "/work/safeme/01-safeme-choose-obscure-or-retrieve-en@800w.webp",
+     "width": 800,
+     "height": 400,
+     "kb": 21
+    }
+   ]
+  },
+  {
+   "file": "02-safeme-obscure-sensitive-data-form-en",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/safeme/02-safeme-obscure-sensitive-data-form-en.webp",
+     "width": 487,
+     "height": 608,
+     "kb": 17
+    },
+    {
+     "src": "/work/safeme/02-safeme-obscure-sensitive-data-form-en@487w.webp",
+     "width": 487,
+     "height": 608,
+     "kb": 17
+    }
+   ]
+  },
+  {
+   "file": "03-safeme-upload-file-step-en",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/safeme/03-safeme-upload-file-step-en.webp",
+     "width": 504,
+     "height": 769,
+     "kb": 14
+    },
+    {
+     "src": "/work/safeme/03-safeme-upload-file-step-en@504w.webp",
+     "width": 504,
+     "height": 769,
+     "kb": 14
+    }
+   ]
+  },
+  {
+   "file": "04-safeme-webcam-realtime-obscure-section-en",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/safeme/04-safeme-webcam-realtime-obscure-section-en.webp",
+     "width": 822,
+     "height": 618,
+     "kb": 42
+    },
+    {
+     "src": "/work/safeme/04-safeme-webcam-realtime-obscure-section-en@800w.webp",
+     "width": 800,
+     "height": 601,
+     "kb": 40
+    }
+   ]
+  }
+ ],
+ "tibyn": [
+  {
+   "file": "01-tibyn-ai-home-desktop",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/tibyn/01-tibyn-ai-home-desktop.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 30
+    },
+    {
+     "src": "/work/tibyn/01-tibyn-ai-home-desktop@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 12
+    }
+   ]
+  }
+ ],
+ "resilience-scale": [
+  {
+   "file": "01-resilience-scale-home-desktop",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/resilience-scale/01-resilience-scale-home-desktop.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 81
+    },
+    {
+     "src": "/work/resilience-scale/01-resilience-scale-home-desktop@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 31
+    }
+   ]
+  },
+  {
+   "file": "02-resilience-scale-home-section2",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/resilience-scale/02-resilience-scale-home-section2.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 53
+    },
+    {
+     "src": "/work/resilience-scale/02-resilience-scale-home-section2@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 21
+    }
+   ]
+  }
+ ],
+ "workshop": [
+  {
+   "file": "01-devfist-workshop-desktop",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/workshop/01-devfist-workshop-desktop.webp",
+     "width": 1600,
+     "height": 1000,
+     "kb": 32
+    },
+    {
+     "src": "/work/workshop/01-devfist-workshop-desktop@800w.webp",
+     "width": 800,
+     "height": 500,
+     "kb": 14
+    }
+   ]
+  }
+ ],
+ "freelance": [
+  {
+   "file": "01-freelance-climate-risk",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/freelance/01-freelance-climate-risk.webp",
+     "width": 1600,
+     "height": 900,
+     "kb": 145
+    },
+    {
+     "src": "/work/freelance/01-freelance-climate-risk@800w.webp",
+     "width": 800,
+     "height": 450,
+     "kb": 48
+    }
+   ]
+  },
+  {
+   "file": "02-freelance-gym",
+   "kind": "desktop",
+   "variants": [
+    {
+     "src": "/work/freelance/02-freelance-gym.webp",
+     "width": 1600,
+     "height": 900,
+     "kb": 70
+    },
+    {
+     "src": "/work/freelance/02-freelance-gym@800w.webp",
+     "width": 800,
+     "height": 450,
+     "kb": 27
+    }
+   ]
+  }
+ ],
+ "oss": [
+  {
+   "file": "decision-matrix",
+   "variants": [
+    {
+     "src": "/oss/decision-matrix.webp",
+     "width": 1360,
+     "height": 1557,
+     "kb": 95
+    },
+    {
+     "src": "/oss/decision-matrix@800w.webp",
+     "width": 800,
+     "height": 916,
+     "kb": 42
+    }
+   ]
+  },
+  {
+   "file": "phasegate",
+   "variants": [
+    {
+     "src": "/oss/phasegate.webp",
+     "width": 1600,
+     "height": 879,
+     "kb": 72
+    },
+    {
+     "src": "/oss/phasegate@800w.webp",
+     "width": 800,
+     "height": 439,
+     "kb": 26
+    }
+   ]
+  },
+  {
+   "file": "django-postmortem",
+   "variants": [
+    {
+     "src": "/oss/django-postmortem.webp",
+     "width": 1280,
+     "height": 1040,
+     "kb": 104
+    },
+    {
+     "src": "/oss/django-postmortem@800w.webp",
+     "width": 800,
+     "height": 650,
+     "kb": 48
+    }
+   ]
+  },
+  {
+   "file": "vue-rtl-kit",
+   "variants": [
+    {
+     "src": "/oss/vue-rtl-kit.webp",
+     "width": 1240,
+     "height": 495,
+     "kb": 42
+    },
+    {
+     "src": "/oss/vue-rtl-kit@800w.webp",
+     "width": 800,
+     "height": 319,
+     "kb": 23
+    }
+   ]
+  },
+  {
+   "file": "django-rtl-admin",
+   "variants": [
+    {
+     "src": "/oss/django-rtl-admin.webp",
+     "width": 1600,
+     "height": 900,
+     "kb": 44
+    },
+    {
+     "src": "/oss/django-rtl-admin@800w.webp",
+     "width": 800,
+     "height": 450,
+     "kb": 16
+    }
+   ]
+  },
+  {
+   "file": "claude-account-switcher",
+   "variants": [
+    {
+     "src": "/oss/claude-account-switcher.webp",
+     "width": 1200,
+     "height": 675,
+     "kb": 22
+    },
+    {
+     "src": "/oss/claude-account-switcher@800w.webp",
+     "width": 800,
+     "height": 450,
+     "kb": 14
+    }
+   ]
+  }
+ ],
+ "photo": [
+  {
+   "src": "/photo/marwan.webp",
+   "width": 807,
+   "height": 1015,
+   "kb": 80
+  },
+  {
+   "src": "/photo/marwan@480w.webp",
+   "width": 480,
+   "height": 604,
+   "kb": 43
+  }
+ ]
+}
