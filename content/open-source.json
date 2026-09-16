@@ -7,13 +7,25 @@
       "name": "decision-matrix",
       "tagline": "Build-vs-buy decisions you can defend.",
       "description": "A guided, in-browser decision matrix. Must-haves stay apart from weights, every score needs evidence, sensitivity analysis flags fragile decisions, and it writes a decision record you can commit.",
-      "stack": ["Vue 3", "TypeScript"],
+      "stack": [
+        "Vue 3",
+        "TypeScript"
+      ],
       "tests": "63 tests",
       "links": [
-        { "label": "Live demo", "href": "https://marwanmaher0.github.io/decision-matrix/" },
-        { "label": "GitHub", "href": "https://github.com/MarwanMaher0/decision-matrix" }
+        {
+          "label": "Live demo",
+          "href": "https://marwanmaher0.github.io/decision-matrix/"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/MarwanMaher0/decision-matrix"
+        }
       ],
-      "image": { "src": "/oss/decision-matrix.webp", "alt": "decision-matrix results: ranked options with a sensitivity warning on a fragile decision" }
+      "image": {
+        "src": "/oss/decision-matrix.webp",
+        "alt": "decision-matrix results: ranked options with a sensitivity warning on a fragile decision"
+      }
     },
     {
       "slug": "phasegate",
@@ -21,10 +33,66 @@
       "name": "phasegate",
       "tagline": "CI that catches the project phases teams skip.",
       "description": "A CLI and GitHub Action that walks a project through seven phases, from discover to operate, and fails CI when a phase the team has moved past is not really done.",
-      "stack": ["TypeScript", "Node", "GitHub Action"],
+      "stack": [
+        "TypeScript",
+        "Node",
+        "GitHub Action"
+      ],
       "tests": "86 tests",
-      "links": [{ "label": "GitHub", "href": "https://github.com/MarwanMaher0/phasegate" }],
-      "image": { "src": "/oss/phasegate.webp", "alt": "phasegate status output for a project that skipped part of its requirements phase" }
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/MarwanMaher0/phasegate"
+        }
+      ],
+      "image": {
+        "src": "/oss/phasegate.webp",
+        "alt": "phasegate status output for a project that skipped part of its requirements phase"
+      },
+      "phases": [
+        {
+          "id": "discover",
+          "question": "Is this problem worth solving, for whom, and how will we know it worked?",
+          "output": "Problem statement with success metrics",
+          "skipped": "Start from a solution and never define success"
+        },
+        {
+          "id": "requirements",
+          "question": "What exactly must the system do?",
+          "output": "Requirements with Given/When/Then criteria",
+          "skipped": "Write requirements nobody can test"
+        },
+        {
+          "id": "design",
+          "question": "Which hard-to-reverse choices are we making, and why?",
+          "output": "Architecture Decision Records",
+          "skipped": "Decide in chat and lose the reasoning"
+        },
+        {
+          "id": "build",
+          "question": "Is the work done by an agreed definition?",
+          "output": "Definition-of-done checklist",
+          "skipped": "“Done” means “merged”"
+        },
+        {
+          "id": "test",
+          "question": "How will we know each requirement works?",
+          "output": "Test plan mapped to requirements",
+          "skipped": "Test what is easy, not what matters"
+        },
+        {
+          "id": "release",
+          "question": "Can we undo it, see it, and tell people?",
+          "output": "Release checklist with rollback steps",
+          "skipped": "Ship on a Friday with no way back"
+        },
+        {
+          "id": "operate",
+          "question": "Can someone else keep it running?",
+          "output": "Runbook and post-incident template",
+          "skipped": "The runbook lives in one person’s head"
+        }
+      ]
     },
     {
       "slug": "django-postmortem",
@@ -32,10 +100,21 @@
       "name": "django-postmortem",
       "tagline": "Blameless incident reviews that stop repeat failures.",
       "description": "A Django app where blame-shaped wording is flagged, every action item must name the guard that stops the failure returning, and a review cannot close until someone has checked that guard works.",
-      "stack": ["Python", "Django"],
+      "stack": [
+        "Python",
+        "Django"
+      ],
       "tests": "133 tests",
-      "links": [{ "label": "GitHub", "href": "https://github.com/MarwanMaher0/django-postmortem" }],
-      "image": { "src": "/oss/django-postmortem.webp", "alt": "django-postmortem review form with blameless-language and guard warnings" }
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/MarwanMaher0/django-postmortem"
+        }
+      ],
+      "image": {
+        "src": "/oss/django-postmortem.webp",
+        "alt": "django-postmortem review form with blameless-language and guard warnings"
+      }
     },
     {
       "slug": "vue-rtl-kit",
@@ -43,10 +122,22 @@
       "name": "vue-rtl-kit",
       "tagline": "Right-to-left done properly for Vue 3 and Nuxt.",
       "description": "Direction state that survives server-side rendering, logical-property utilities, and a BidiText component that isolates only the runs that would move, so dates and IDs stop reversing inside Arabic.",
-      "stack": ["Vue 3", "Nuxt", "TypeScript"],
+      "stack": [
+        "Vue 3",
+        "Nuxt",
+        "TypeScript"
+      ],
       "tests": "106 tests",
-      "links": [{ "label": "GitHub", "href": "https://github.com/MarwanMaher0/vue-rtl-kit" }],
-      "image": { "src": "/oss/vue-rtl-kit.webp", "alt": "Before and after: the same strings rendered raw and through BidiText" }
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/MarwanMaher0/vue-rtl-kit"
+        }
+      ],
+      "image": {
+        "src": "/oss/vue-rtl-kit.webp",
+        "alt": "Before and after: the same strings rendered raw and through BidiText"
+      }
     },
     {
       "slug": "django-rtl-admin",
@@ -54,10 +145,21 @@
       "name": "django-rtl-admin",
       "tagline": "A properly bilingual, right-to-left Django admin.",
       "description": "One app in INSTALLED_APPS: logical-property styling for the parts of the admin that stay mirrored wrong, isolated mixed-script values, Arabic-Indic digits and a language switcher.",
-      "stack": ["Python", "Django"],
+      "stack": [
+        "Python",
+        "Django"
+      ],
       "tests": "192 tests",
-      "links": [{ "label": "GitHub", "href": "https://github.com/MarwanMaher0/django-rtl-admin" }],
-      "image": { "src": "/oss/django-rtl-admin.webp", "alt": "The same Django admin side by side in English and Arabic" }
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/MarwanMaher0/django-rtl-admin"
+        }
+      ],
+      "image": {
+        "src": "/oss/django-rtl-admin.webp",
+        "alt": "The same Django admin side by side in English and Arabic"
+      }
     },
     {
       "slug": "claude-account-switcher",
@@ -65,10 +167,21 @@
       "name": "claude-account-switcher",
       "tagline": "Keep working when one Claude Code account hits its limit.",
       "description": "Switches to your next Claude Code account and carries the conversation across, in the terminal or VS Code.",
-      "stack": ["Bash", "Python"],
+      "stack": [
+        "Bash",
+        "Python"
+      ],
       "tests": "232 checks",
-      "links": [{ "label": "GitHub", "href": "https://github.com/MarwanMaher0/claude-account-switcher" }],
-      "image": { "src": "/oss/claude-account-switcher.webp", "alt": "Terminal: one account hits its limit and work continues on the next" }
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/MarwanMaher0/claude-account-switcher"
+        }
+      ],
+      "image": {
+        "src": "/oss/claude-account-switcher.webp",
+        "alt": "Terminal: one account hits its limit and work continues on the next"
+      }
     }
   ],
   "also": {

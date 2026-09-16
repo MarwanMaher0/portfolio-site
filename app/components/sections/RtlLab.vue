@@ -7,6 +7,7 @@ import { canAnimate, loadGsap } from '~/composables/useMotion'
 const data = site.rtlLab
 const isolated = ref(false)
 const touched = ref(false)
+const hydrated = ref(false)
 const root = ref<HTMLElement | null>(null)
 const tools = oss.tools.filter((tool) => data.tools.includes(tool.slug))
 let observer: IntersectionObserver | null = null
@@ -26,6 +27,7 @@ async function toggle(next = !isolated.value, fromUser = true) {
 }
 
 onMounted(async () => {
+  hydrated.value = true
   if (!root.value || !canAnimate()) return
   observer = new IntersectionObserver(([entry]) => {
     if (entry?.isIntersecting && !touched.value && !isolated.value) {
@@ -38,7 +40,7 @@ onBeforeUnmount(() => { observer?.disconnect(); window.clearTimeout(timer) })
 </script>
 
 <template>
-  <section :id="data.id" ref="root" class="lab surface">
+  <section :id="data.id" ref="root" class="lab surface" :data-hydrated="hydrated ? 'true' : 'false'">
     <div class="container lab__inner">
       <header class="lab__head">
         <p class="kicker">{{ data.kicker }}</p>

@@ -26,6 +26,7 @@ test('the decision toy reranks and flags a fragile decision', async ({ page }) =
   await page.goto('/')
   const toy = page.locator('.toy')
   await toy.scrollIntoViewIfNeeded()
+  await expect(toy).toHaveAttribute('data-hydrated', 'true')
   await expect(toy.locator('.toy__row').first()).toContainText('Buy a hosted service')
 
   const control = toy.locator('input[type=range]').nth(2)

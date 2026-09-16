@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import site from '~~/content/site.json'
 import { rank, type Criterion } from '~/utils/decision'
 import { canAnimate, loadGsap } from '~/composables/useMotion'
@@ -8,6 +8,8 @@ const data = site.decisionToy
 const criteria = ref<Criterion[]>(data.criteria.map((c) => ({ ...c })))
 const mustHaveOn = ref(false)
 const list = ref<HTMLElement | null>(null)
+const hydrated = ref(false)
+onMounted(() => { hydrated.value = true })
 
 const verdict = computed(() => rank(data.options as never, criteria.value, mustHaveOn.value, data.fragileThreshold))
 const announcement = computed(() => verdict.value.winner
@@ -26,7 +28,7 @@ watch(() => verdict.value.ranked.map((r) => r.id).join(','), async () => {
 </script>
 
 <template>
-  <div class="toy container">
+  <div class="toy container" :data-hydrated="hydrated ? 'true' : 'false'">
     <div class="toy__controls">
       <p class="mono">{{ data.example }}</p>
       <h3 class="toy__title h2">{{ data.title }}</h3>

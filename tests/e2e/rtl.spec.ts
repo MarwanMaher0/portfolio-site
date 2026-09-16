@@ -23,6 +23,7 @@ test.describe('Arabic lab', () => {
     await page.goto('/')
     const lab = page.locator('#rtl')
     await lab.scrollIntoViewIfNeeded()
+    await expect(lab).toHaveAttribute('data-hydrated', 'true')
     const values = lab.locator('.lab__value')
     await expect(values).toHaveCount(site.rtlLab.samples.length)
 
