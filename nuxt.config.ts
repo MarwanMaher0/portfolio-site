@@ -1,51 +1,18 @@
-import { fileURLToPath } from 'node:url';
-
-const SITE_URL = 'https://marwanmaher.vercel.app';
-const TITLE = 'Marwan Maher — Technical PM & Engineer · IP/Legal-tech · Django · Vue · LLM pipelines';
-const DESCRIPTION =
-  'Technical Project Manager and engineer running the IT portfolio of a Riyadh IP-services firm: five production systems, from an IP-management platform with 52 live services to a trademark-monitoring platform I took from vendor evaluation to in-house build, built with Django, Vue, PostgreSQL and LLM pipelines.';
-
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true,
-  typescript: {
-    shim: false
-  },
-  alias: {
-    "@": fileURLToPath(new URL('./', import.meta.url)),
-  },
+  compatibilityDate: '2025-09-01',
+  devtools: { enabled: false },
+  experimental: { viewTransition: true },
+  components: [{ path: '~/components', pathPrefix: false }],
+  css: ['~/assets/css/tokens.css', '~/assets/css/main.css'],
+  nitro: { prerender: { crawlLinks: true, routes: ['/', '/404.html'] } },
   app: {
     head: {
-      title: TITLE,
-      htmlAttrs: {
-        lang: 'en'
-      },
-      meta: [
-        { charset: "utf-8" },
-        { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "description", content: DESCRIPTION },
-        { name: "author", content: "Marwan Maher" },
-        { name: "format-detection", content: "telephone=no" },
-        { property: "og:type", content: "website" },
-        { property: "og:url", content: SITE_URL },
-        { property: "og:title", content: TITLE },
-        { property: "og:description", content: DESCRIPTION },
-        { name: "twitter:card", content: "summary" },
-        { name: "twitter:title", content: TITLE },
-        { name: "twitter:description", content: DESCRIPTION },
-      ],
+      htmlAttrs: { lang: 'en' },
       link: [
-        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-        { rel: "alternate icon", type: "image/x-icon", href: "/favicon.ico" },
-        { rel: "canonical", href: SITE_URL },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap",
-        },
+        { rel: 'icon', type: 'image/svg+xml', href: '/brand/favicon.svg' },
+        { rel: 'apple-touch-icon', href: '/brand/apple-touch-icon.png' },
       ],
-      script: [
-        { src: "/js/wow.min.js" },
-      ]
-    }
-  }
+      meta: [{ name: 'theme-color', content: '#07100D' }],
+    },
+  },
 })

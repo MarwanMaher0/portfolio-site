@@ -1,0 +1,366 @@
+{
+  "person": {
+    "name": "Marwan Maher Mostafa",
+    "shortName": "Marwan Maher",
+    "role": "Technical Project Manager & Engineer",
+    "location": "Egypt",
+    "availability": "Open to remote & relocation (KSA/UAE)",
+    "timezone": "UTC+2 (Cairo)",
+    "email": "marwanmaher635@gmail.com",
+    "phone": "+20 102 502 7019",
+    "phoneHref": "tel:+201025027019",
+    "linkedin": "https://www.linkedin.com/in/marwan-maher-b11628227",
+    "github": "https://github.com/MarwanMaher0",
+    "siteUrl": "https://marwanmaher.vercel.app",
+    "languages": [
+      "Arabic (native)",
+      "English (professional)"
+    ],
+    "education": "B.Sc. Computer Science, Assiut University, Egypt, 2019 – 2023",
+    "photo": {
+      "src": "/photo/marwan.webp",
+      "srcSmall": "/photo/marwan@480w.webp",
+      "fallback": "/photo/marwan-fallback.png",
+      "width": 807,
+      "height": 1015,
+      "alt": "Marwan Maher, smiling, in a dark green shirt"
+    }
+  },
+  "seo": {
+    "title": "Marwan Maher: Technical Project Manager & Engineer",
+    "description": "I run the IT portfolio at SIPRC: five production systems, including an IP-management platform with 52 IP services live that I built end to end. Django, Vue, AI features, Arabic/English. Open to remote and KSA/UAE.",
+    "ogImage": "/brand/og-image.png",
+    "favicon": "/brand/favicon.svg",
+    "appleTouchIcon": "/brand/apple-touch-icon.png",
+    "themeColor": "#07100D"
+  },
+  "cv": [
+    {
+      "label": "Technical Project Manager",
+      "file": "/cv/Marwan_Maher_Technical_PM_AI.pdf",
+      "hint": "For PM, product and digital-transformation roles",
+      "primary": true
+    },
+    {
+      "label": "AI Implementation Engineer",
+      "file": "/cv/Marwan_Maher_AI_Implementation_Engineer.pdf",
+      "hint": "For AI and forward-deployed engineering roles"
+    },
+    {
+      "label": "Senior Full-Stack Engineer",
+      "file": "/cv/Marwan_Maher_Senior_Fullstack_Vue.pdf",
+      "hint": "For Vue, Nuxt and Django engineering roles"
+    }
+  ],
+  "nav": [
+    {
+      "label": "Decide",
+      "href": "#decide",
+      "phase": "decide"
+    },
+    {
+      "label": "Ship",
+      "href": "#ship",
+      "phase": "ship"
+    },
+    {
+      "label": "Learn",
+      "href": "#learn",
+      "phase": "learn"
+    },
+    {
+      "label": "Path",
+      "href": "#path"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Egypt · Open to remote & relocation (KSA/UAE)",
+    "name": "Marwan Maher",
+    "headline": "Technical Project Manager & Engineer.",
+    "sub": "I run the IT portfolio at SIPRC, the Saudi Intellectual Property Rights Company: five production systems, including an IP-management platform with 52 IP services live that I built end to end.",
+    "motto": [
+      "Decide",
+      "Ship",
+      "Learn"
+    ],
+    "stats": [
+      {
+        "value": 5,
+        "suffix": "",
+        "label": "production systems in my portfolio"
+      },
+      {
+        "value": 52,
+        "suffix": "",
+        "label": "IP services live on a platform I built"
+      },
+      {
+        "value": 40,
+        "suffix": "%",
+        "label": "less manual regression, from the QA practice I founded"
+      }
+    ],
+    "ctaPrimary": {
+      "label": "See the work",
+      "href": "#ship"
+    },
+    "ctaSecondary": {
+      "label": "Download CV"
+    },
+    "scrollHint": "Scroll"
+  },
+  "chapters": [
+    {
+      "id": "decide",
+      "number": "01",
+      "title": "Decide",
+      "headline": "Decide what is worth building.",
+      "intro": "Before any code: requirements a vendor can be judged against, options scored with evidence, and a clear call on whether to build, buy, or stop."
+    },
+    {
+      "id": "ship",
+      "number": "02",
+      "title": "Ship",
+      "headline": "Ship systems people rely on.",
+      "intro": "From the IP-management platform an operations team runs its day on, to a Three.js showroom and AR try-on."
+    },
+    {
+      "id": "learn",
+      "number": "03",
+      "title": "Learn",
+      "headline": "Learn from what breaks.",
+      "intro": "Every failure should make the next one harder. I write that down as tests, guards and tools, and some of those tools are open source."
+    }
+  ],
+  "decideStories": [
+    {
+      "kicker": "Build vs buy",
+      "title": "Four vendors, one decision",
+      "body": "For the trademark-monitoring platform I wrote the requirements, ran a four-vendor evaluation against them and made the build-vs-buy call. Then I led the in-house build with the team. It is in production."
+    },
+    {
+      "kicker": "Knowing when to stop",
+      "title": "A finished build that missed the point",
+      "body": "After the business rejected a completed Power BI build, I re-scoped reporting as a custom module inside the platform instead of patching the wrong thing."
+    },
+    {
+      "kicker": "AI with accountability",
+      "title": "A rollout gate for model output",
+      "body": "Model output that drives a legal recommendation is validated against historical outcomes before anyone relies on it. That is a condition of rollout, not a benchmark number."
+    }
+  ],
+  "decisionToy": {
+    "title": "Try it: when does the winner flip?",
+    "intro": "A tiny version of decision-matrix. Move the weights and watch the ranking. A thin margin means your weights are deciding, not your options.",
+    "example": "Example: replacing an ageing build server",
+    "criteria": [
+      {
+        "id": "cost",
+        "label": "Cost",
+        "weight": 25
+      },
+      {
+        "id": "speed",
+        "label": "Time to value",
+        "weight": 30
+      },
+      {
+        "id": "control",
+        "label": "Control",
+        "weight": 20
+      },
+      {
+        "id": "risk",
+        "label": "Low risk",
+        "weight": 25
+      }
+    ],
+    "options": [
+      {
+        "id": "buy",
+        "label": "Buy a hosted service",
+        "scores": {
+          "cost": 3,
+          "speed": 5,
+          "control": 2,
+          "risk": 4
+        },
+        "passesMustHave": false
+      },
+      {
+        "id": "build",
+        "label": "Build in-house",
+        "scores": {
+          "cost": 2,
+          "speed": 2,
+          "control": 5,
+          "risk": 3
+        },
+        "passesMustHave": true
+      },
+      {
+        "id": "nothing",
+        "label": "Do nothing",
+        "scores": {
+          "cost": 5,
+          "speed": 1,
+          "control": 3,
+          "risk": 1
+        },
+        "passesMustHave": true
+      }
+    ],
+    "mustHave": {
+      "label": "Must-have: data stays in our own region",
+      "explain": "A must-have is a yes/no gate, not a weight. Switch it on and an option that fails it cannot win, however well it scores."
+    },
+    "fragileLabel": "Fragile: a small change in weights flips this",
+    "robustLabel": "Robust: the winner holds",
+    "fragileThreshold": 0.15,
+    "footnote": "Scores are illustrative. The full tool adds evidence per score, pairwise weighting and a decision record.",
+    "cta": {
+      "label": "Open decision-matrix",
+      "href": "https://marwanmaher0.github.io/decision-matrix/"
+    }
+  },
+  "rtlLab": {
+    "id": "rtl",
+    "kicker": "Interlude",
+    "title": "Arabic, done properly.",
+    "intro": "Put a date or a phone number inside an Arabic sentence and the browser silently reorders it. The data is right; only the pixels are wrong, so users stop trusting the data. Flip the switch.",
+    "toggleOff": "As most sites render it",
+    "toggleOn": "With bidirectional isolation",
+    "samples": [
+      {
+        "label": "Date",
+        "before": "آخر تحديث للمستند ",
+        "value": "12-05-2024",
+        "after": " بواسطة الفريق",
+        "translation": "Document last updated 12-05-2024 by the team"
+      },
+      {
+        "label": "Phone",
+        "before": "للتواصل اتصل على ",
+        "value": "010 2345 6789",
+        "after": " في أي وقت",
+        "translation": "To reach us, call 010 2345 6789 any time"
+      },
+      {
+        "label": "Order",
+        "before": "تم شحن الطلب ",
+        "value": "#4821-B",
+        "after": " اليوم",
+        "translation": "Order #4821-B shipped today"
+      },
+      {
+        "label": "Delivery",
+        "before": "مدة التوصيل ",
+        "value": "3-5",
+        "after": " أيام",
+        "translation": "Delivery takes 3-5 days"
+      }
+    ],
+    "verified": "Verified in Chromium: without isolation these four render as 2024-05-12, 6789 2345 010, B-4821# and 5-3.",
+    "tools": [
+      "vue-rtl-kit",
+      "django-rtl-admin"
+    ],
+    "closing": "Much of my work ships in Arabic and English. These two open-source kits hold the fixes I kept needing."
+  },
+  "principles": {
+    "title": "How I work",
+    "items": [
+      {
+        "number": "01",
+        "title": "Look at the real data before writing the parser.",
+        "body": "Formats you assume are formats you get wrong. More than once, a field I \"knew\" the shape of turned out to have two shapes, and the difference mattered."
+      },
+      {
+        "number": "02",
+        "title": "Test in the real thing.",
+        "body": "Scripted probes report success on broken paths. If it is a user interface, it is not done until it has been driven in a browser."
+      },
+      {
+        "number": "03",
+        "title": "Make the failure mode expensive to reintroduce.",
+        "body": "A bug that reached production comes back as a regression test, a database constraint or a type, so the same mistake fails loudly next time."
+      },
+      {
+        "number": "04",
+        "title": "Say plainly what broke.",
+        "body": "Status reports name what failed, why, and what changed. A clear bad-news report beats a vague good one."
+      }
+    ]
+  },
+  "path": {
+    "title": "The path so far",
+    "intro": "Building software since 2022, from freelance client work to running an IT portfolio.",
+    "items": [
+      {
+        "dates": "2019 – 2023",
+        "title": "B.Sc. Computer Science",
+        "org": "Assiut University, Egypt",
+        "body": "Graduated in 2023.",
+        "kind": "education"
+      },
+      {
+        "dates": "2022 – 2023",
+        "title": "Frontend Developer",
+        "org": "Freelance",
+        "body": "Client projects from requirements to deployment, including a climate-risk tool for PhD research.",
+        "kind": "work"
+      },
+      {
+        "dates": "2023 – 2024",
+        "title": "Frontend Engineer",
+        "org": "IDAAM",
+        "body": "Front-end modules for Keme, a US clinic-management platform.",
+        "kind": "work"
+      },
+      {
+        "dates": "2024 – 2025",
+        "title": "Frontend Engineer",
+        "org": "Digitee (Nexxora Holding)",
+        "body": "Sole frontend engineer for six production apps.",
+        "kind": "work"
+      },
+      {
+        "dates": "May 2025 – Jul 2025",
+        "title": "Frontend Engineer, contractor then full-time",
+        "org": "Cepro (SIPRC group)",
+        "body": "Built the brand-protection dashboard from zero.",
+        "kind": "work"
+      },
+      {
+        "dates": "Jul 2025 – Mar 2026",
+        "title": "Senior Frontend Engineer, then Full-Stack Engineer",
+        "org": "SIPRC",
+        "body": "Built the IP-management platform end to end, siprc.sa and its AI assistant, and the cepro.ai rebuild.",
+        "kind": "work"
+      },
+      {
+        "dates": "Mar 2026 – present",
+        "title": "Project Manager, IT Projects",
+        "org": "SIPRC",
+        "body": "Running the IT portfolio: five production systems.",
+        "kind": "work",
+        "current": true
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Contact",
+    "headline": "Let's build the next one.",
+    "line": "If your team needs someone who can decide, ship and learn, I would like to hear about it.",
+    "copyEmailLabel": "Copy email",
+    "copiedLabel": "Copied"
+  },
+  "footer": {
+    "note": "Designed around three phase gates: Decide, Ship, Learn.",
+    "copyright": "© 2026 Marwan Maher"
+  }
+}
