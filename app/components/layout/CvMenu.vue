@@ -1,13 +1,21 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import site from '~~/content/site.json'
 
 const open = ref(false)
+const root = ref<HTMLElement | null>(null)
 const close = () => { open.value = false }
+
+// A menu left hanging over the page after clicking elsewhere looks broken.
+const onDocumentPointerDown = (event: PointerEvent) => {
+  if (open.value && root.value && !root.value.contains(event.target as Node)) close()
+}
+onMounted(() => document.addEventListener('pointerdown', onDocumentPointerDown))
+onBeforeUnmount(() => document.removeEventListener('pointerdown', onDocumentPointerDown))
 </script>
 
 <template>
-  <div class="cv" @keydown.esc="close">
+  <div ref="root" class="cv" @keydown.esc="close">
     <button
       class="cv__button" type="button" data-magnetic :aria-expanded="open" aria-haspopup="true"
       @click="open = !open"

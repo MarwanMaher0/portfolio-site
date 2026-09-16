@@ -34,6 +34,22 @@ const closeLightbox = () => {
 }
 watch(lightbox, (value) => { if (value === null && dialog.value?.open) dialog.value.close() })
 
+/** Chrome lets Tab escape a modal dialog to the body; keep the cycle inside. */
+const onDialogKeydown = (event: KeyboardEvent) => {
+  if (event.key !== 'Tab' || !dialog.value) return
+  const focusable = [...dialog.value.querySelectorAll<HTMLElement>('button, [href], [tabindex]:not([tabindex="-1"])')]
+    .filter((el) => el.offsetParent !== null)
+  if (!focusable.length) return
+  const first = focusable[0]!
+  const last = focusable[focusable.length - 1]!
+  const active = document.activeElement
+  if (event.shiftKey && (active === first || !dialog.value.contains(active))) {
+    event.preventDefault(); last.focus()
+  } else if (!event.shiftKey && (active === last || !dialog.value.contains(active))) {
+    event.preventDefault(); first.focus()
+  }
+}
+
 const onSwipeStart = (event: PointerEvent) => { swipeStart.value = event.clientX }
 const onSwipeEnd = (event: PointerEvent) => {
   if (swipeStart.value === null) return
@@ -178,7 +194,7 @@ useHead({
     <dialog
       v-if="lightbox !== null" ref="dialog" class="lightbox"
       @close="lightbox = null" @cancel="lightbox = null"
-      @keydown.left="step(-1)" @keydown.right="step(1)"
+      @keydown.left="step(-1)" @keydown.right="step(1)" @keydown="onDialogKeydown"
       @pointerdown="onSwipeStart" @pointerup="onSwipeEnd" @pointercancel="swipeStart = null" @dragstart.prevent
     >
       <button class="lightbox__close" type="button" @click="closeLightbox">Close ✕</button>
