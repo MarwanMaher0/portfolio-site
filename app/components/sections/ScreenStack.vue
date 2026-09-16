@@ -13,10 +13,11 @@ onMounted(async () => {
   if (!canAnimate() || !root.value) return
   const { gsap } = await loadGsap()
   ctx = gsap.context(() => {
+    // Cards start visible and only travel into the fan: an empty frame reads as broken.
     gsap.from('[data-card]', {
-      xPercent: (i) => -12 * (2 - i), yPercent: (i) => 8 * (2 - i), rotateY: (i) => -12 * (2 - i), opacity: 0,
+      xPercent: (i) => -10 * (2 - i), yPercent: (i) => 6 * (2 - i), rotateY: (i) => -10 * (2 - i), opacity: 0.5,
       ease: 'none', stagger: 0.05,
-      scrollTrigger: { trigger: root.value, start: 'top 90%', end: 'center 55%', scrub: 0.5 },
+      scrollTrigger: { trigger: root.value, start: 'top 95%', end: 'center 65%', scrub: 0.5 },
     })
   }, root.value)
 
