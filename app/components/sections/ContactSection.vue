@@ -59,7 +59,11 @@ onBeforeUnmount(() => { ctx?.revert(); cleanup?.() })
     <div class="container contact__inner">
       <p class="kicker">{{ data.kicker }}</p>
       <h2 class="contact__headline">
-        <span v-for="(letter, index) in letters" :key="index" class="contact__letter" data-letter>{{ letter === ' ' ? ' ' : letter }}</span>
+        <template v-for="(word, wordIndex) in words" :key="wordIndex">
+          <span class="contact__word">
+            <span v-for="(letter, index) in word" :key="index" class="contact__letter" data-letter>{{ letter }}</span>
+          </span>{{ wordIndex < words.length - 1 ? ' ' : '' }}
+        </template>
       </h2>
       <p class="lead contact__line">{{ data.line }}</p>
 
@@ -95,7 +99,6 @@ onBeforeUnmount(() => { ctx?.revert(); cleanup?.() })
 .contact__inner { display: flex; flex-direction: column; gap: 20px; }
 .contact__headline { font-size: var(--text-hero); letter-spacing: -0.025em; }
 .contact__word { display: inline-block; white-space: nowrap; }
-.contact__word + .contact__word { margin-left: 0.28em; }
 .contact__letter { display: inline-block; will-change: transform; }
 .contact__line { margin-top: 6px; }
 .contact__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; }

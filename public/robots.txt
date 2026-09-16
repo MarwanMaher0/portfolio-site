@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marwanmaher.vercel.app/sitemap.xml

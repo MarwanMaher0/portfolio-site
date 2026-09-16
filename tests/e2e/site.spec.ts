@@ -80,3 +80,17 @@ test('the lightbox traps focus and closes with Escape', async ({ page }) => {
   await page.keyboard.press('Escape')
   await expect(page.locator('.lightbox')).toHaveCount(0)
 })
+
+test('the contact headline renders its text', async ({ page }) => {
+  await page.goto('/')
+  const headline = page.locator('.contact__headline')
+  await expect(headline).toContainText("Let's build the next one.")
+})
+
+test('search and answer engines get the files they look for', async ({ page }) => {
+  for (const [path, needle] of [['/robots.txt', 'Sitemap:'], ['/sitemap.xml', '/work/ipora'], ['/llms.txt', 'Technical Project Manager']]) {
+    const response = await page.request.get(path)
+    expect(response.status(), path).toBe(200)
+    expect(await response.text(), path).toContain(needle)
+  }
+})

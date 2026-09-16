@@ -50,15 +50,48 @@ const step = (delta: number) => {
 useMagnetic()
 useReveal(() => document.querySelector('main') as HTMLElement)
 
+const pageUrl = `${site.person.siteUrl}/work/${project.slug}`
+const imageUrl = `${site.person.siteUrl}${project.images?.[0]?.src ?? site.seo.ogImage}`
+// Keep the templated title inside the ~60 characters search results show.
+const shortTitle = `${project.title} — ${project.subtitle}`.length > 44
+  ? project.title
+  : `${project.title} — ${project.subtitle}`
+
 useHead({
-  title: `${project.title} — ${project.subtitle}`,
+  title: shortTitle,
   meta: [
     { name: 'description', content: project.summary },
     { property: 'og:title', content: `${project.title} · ${site.person.shortName}` },
     { property: 'og:description', content: project.summary },
-    { property: 'og:image', content: `${site.person.siteUrl}${project.images?.[0]?.src ?? site.seo.ogImage}` },
+    { property: 'og:image', content: imageUrl },
+    { property: 'og:type', content: 'article' },
+    { property: 'og:url', content: pageUrl },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: `${project.title} · ${site.person.shortName}` },
+    { name: 'twitter:description', content: project.summary },
+    { name: 'twitter:image', content: imageUrl },
   ],
-  link: [{ rel: 'canonical', href: `${site.person.siteUrl}/work/${project.slug}` }],
+  link: [{ rel: 'canonical', href: pageUrl }],
+  script: [{
+    type: 'application/ld+json',
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      name: `${project.title} — ${project.subtitle}`,
+      description: project.summary,
+      url: pageUrl,
+      image: imageUrl,
+      dateCreated: project.dates,
+      keywords: project.stack.join(', '),
+      creator: {
+        '@type': 'Person',
+        name: site.person.name,
+        url: site.person.siteUrl,
+        jobTitle: project.role,
+      },
+      ...(project.org ? { sourceOrganization: { '@type': 'Organization', name: project.org } } : {}),
+    }),
+  }],
 })
 </script>
 
