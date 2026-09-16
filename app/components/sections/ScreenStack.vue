@@ -2,7 +2,7 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { canAnimate, hasFinePointer, loadGsap } from '~/composables/useMotion'
 
-const props = defineProps<{ images: { src: string; alt: string; kind?: string }[] }>()
+const props = defineProps<{ images: { src: string; alt: string; kind?: string }[]; eager?: boolean }>()
 const root = ref<HTMLElement | null>(null)
 let ctx: ReturnType<typeof import('gsap').gsap.context> | null = null
 
@@ -53,10 +53,10 @@ onBeforeUnmount(() => ctx?.revert())
       v-for="(img, index) in desktop()" :key="img.src" class="stack__card" data-card
       :style="{ zIndex: index + 1, '--depth': index }"
     >
-      <AppImage :src="img.src" :alt="img.alt" sizes="(max-width: 1023px) 92vw, 52vw" />
+      <AppImage :src="img.src" :alt="img.alt" sizes="(max-width: 1023px) 92vw, 52vw" :eager="eager" />
     </div>
     <div v-if="phone()" class="stack__phone">
-      <AppImage :src="phone()!.src" :alt="phone()!.alt" sizes="180px" />
+      <AppImage :src="phone()!.src" :alt="phone()!.alt" sizes="180px" :eager="eager" />
     </div>
   </div>
 </template>

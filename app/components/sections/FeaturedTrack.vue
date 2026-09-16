@@ -81,7 +81,7 @@ onBeforeUnmount(() => ctx?.revert())
         </div>
 
         <NuxtLink class="panel__visual" :to="`/work/${project.slug}`" :aria-label="`Open the ${project.title} case study`" data-cursor="View">
-          <ScreenStack v-if="project.images?.length" :images="project.images" />
+          <ScreenStack v-if="project.images?.length" :images="project.images" :eager="i === 0" />
           <TypographicPanel v-else :steps="['4 vendors evaluated', '1 build-vs-buy call', 'in production']" />
         </NuxtLink>
         </article>

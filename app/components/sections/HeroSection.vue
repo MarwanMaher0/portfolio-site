@@ -78,7 +78,7 @@ onMounted(async () => {
             <rect x="1" y="1" width="438" height="538" rx="33" fill="none" stroke="var(--accent)" stroke-width="2" pathLength="1" />
           </svg>
           <AppImage
-            class="hero__img" :src="site.person.photo.src" :alt="site.person.photo.alt" eager
+            class="hero__img" :src="site.person.photo.src" :alt="site.person.photo.alt" eager priority
             sizes="(max-width: 1023px) 72vw, 34vw"
           />
         </div>
