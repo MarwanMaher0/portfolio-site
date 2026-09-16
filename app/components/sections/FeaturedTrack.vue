@@ -22,31 +22,89 @@ onMounted(async () => {
   if (!canAnimate() || !root.value || !track.value) return
   const { gsap, ScrollTrigger } = await loadGsap()
   ctx = gsap.context(() => {
+    // The counter names whichever panel covers the screen. It reads the rail's
+    // live position, because the scrub animation lags the scroll by design.
+    const panels = gsap.utils.toArray<HTMLElement>('[data-panel]')
+    const syncIndex = () => {
+      let best = 0
+      let bestScore = -Infinity
+      panels.forEach((panel, i) => {
+        const rect = panel.getBoundingClientRect()
+        const horizontal = Math.min(rect.right, window.innerWidth) - Math.max(rect.left, 0)
+        const vertical = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0)
+        const score = window.innerWidth >= 1024 ? horizontal : vertical
+        if (score > bestScore) { bestScore = score; best = i }
+      })
+      index.value = best + 1
+    }
+    syncIndex()
+    window.addEventListener('scroll', syncIndex, { passive: true })
+    window.addEventListener('resize', syncIndex)
+
+    // Held so the focus handler can drive the same tween the scroll drives.
+    let rail: gsap.core.Tween | null = null
     const media = gsap.matchMedia()
     media.add('(min-width: 1024px)', () => {
-      const panels = gsap.utils.toArray<HTMLElement>('[data-panel]')
       const distance = () => Math.max(0, track.value!.scrollWidth - window.innerWidth)
       const tween = gsap.to(track.value, {
-        x: () => -distance(), ease: 'none',
+        x: () => -distance(), ease: 'none', onUpdate: syncIndex,
         scrollTrigger: {
           trigger: root.value, start: 'top top', end: 'bottom bottom',
           scrub: 0.7, invalidateOnRefresh: true,
-          onUpdate: ({ progress }) => { index.value = Math.min(panels.length, Math.floor(progress * panels.length) + 1) },
         },
       })
-      return () => tween.kill()
+      rail = tween
+      return () => { rail = null; tween.kill() }
     })
 
-    // Keyboard users tab through the panels; move the track to whichever panel has focus.
+    // The sticky window only ever moves by the rail's transform, so a browser
+    // that scrolls it to reveal a focused child leaves every panel shifted.
+    const viewport = root.value!.querySelector<HTMLElement>('.track__viewport')
+    const unscroll = () => {
+      if (!viewport) return
+      if (viewport.scrollLeft) viewport.scrollLeft = 0
+      if (viewport.scrollTop) viewport.scrollTop = 0
+    }
+    viewport?.addEventListener('scroll', unscroll)
+
+    // Keyboard users tab through the panels. The browser's own scroll-into-view
+    // moves the page by the panel's horizontal offset, which throws the reader
+    // far up the document, so put the scroll exactly where the panel belongs
+    // after the browser has had its go. Setting the rail by hand is not enough:
+    // the scrub tween would keep easing it back from wherever it was, and the
+    // link stays off screen for most of a second. Feed the new scroll position
+    // to the ScrollTrigger and finish that tween instead, so the rail is already
+    // where the reader is looking, and hold it there for a few frames, because
+    // browsers run their scroll-into-view after the focus event, not before it.
+    let holding = 0
     gsap.utils.toArray<HTMLElement>('[data-panel]').forEach((panel, panelIndex) => {
       panel.addEventListener('focusin', () => {
         if (window.innerWidth < 1024 || !root.value) return
-        const top = root.value.offsetTop
-        const span = root.value.offsetHeight - window.innerHeight
-        const target = top + (span * panelIndex) / Math.max(1, items.length - 1)
-        if (Math.abs(window.scrollY - target) > 40) window.scrollTo({ top: target, behavior: 'auto' })
+        const place = () => {
+          unscroll()
+          const top = root.value!.getBoundingClientRect().top + window.scrollY
+          const span = root.value!.offsetHeight - window.innerHeight
+          const target = Math.round(top + (span * panelIndex) / Math.max(1, items.length - 1))
+          if (Math.abs(window.scrollY - target) > 1) window.scrollTo({ top: target, behavior: 'auto' })
+          const trigger = rail?.scrollTrigger
+          if (trigger) {
+            ScrollTrigger.update()
+            const scrub = trigger.getTween?.()
+            if (scrub) scrub.progress(1)
+            else rail!.progress(trigger.progress)
+          }
+          syncIndex()
+        }
+        const mine = ++holding
+        const hold = (frame: number) => {
+          if (mine !== holding) return
+          place()
+          if (frame < 12) requestAnimationFrame(() => hold(frame + 1))
+        }
+        hold(0)
       })
     })
+
   }, root.value)
 })
 onBeforeUnmount(() => ctx?.revert())
@@ -87,7 +145,7 @@ onBeforeUnmount(() => ctx?.revert())
         </article>
       </div>
 
-      <div class="track__progress hide-sm" aria-hidden="true">
+      <div class="track__progress" aria-hidden="true">
       <span class="track__bar"><span class="track__fill" :style="{ transform: `scaleX(${index / items.length})` }" /></span>
         <span class="mono num">{{ String(index).padStart(2, '0') }} / {{ String(items.length).padStart(2, '0') }}</span>
       </div>
@@ -99,6 +157,7 @@ onBeforeUnmount(() => ctx?.revert())
 .track { position: relative; --panels: 5; }
 .track__viewport { overflow: hidden; }
 @media (min-width: 1024px) {
+  .track__progress { position: absolute; left: clamp(24px, 5vw, 96px); bottom: 48px; margin: 0; width: min(320px, 30vw); }
   /* One screen per panel, so the page is the right height before any script runs. */
   .track { height: calc(100svh + (var(--panels) - 1) * 100vw); }
   .track__viewport { position: sticky; top: 0; height: 100svh; }
@@ -124,7 +183,7 @@ onBeforeUnmount(() => ctx?.revert())
 .panel__stack { display: flex; flex-wrap: wrap; gap: 8px; }
 .panel__cta { display: inline-block; margin-top: 8px; color: var(--accent); font-weight: 600; }
 .panel__visual { display: block; }
-.track__progress { position: absolute; left: clamp(24px, 5vw, 96px); bottom: 48px; z-index: 3; display: flex; align-items: center; gap: 16px; width: min(320px, 30vw); }
+.track__progress { position: sticky; bottom: 24px; margin: 0 auto; width: min(320px, 70vw); z-index: 3; display: flex; align-items: center; gap: 16px; width: min(320px, 30vw); }
 .track__bar { flex: 1; height: 2px; background: var(--line); overflow: hidden; }
 .track__fill { display: block; height: 100%; background: var(--accent); transform-origin: left; transition: transform 160ms linear; }
 @media (prefers-reduced-motion: reduce) {

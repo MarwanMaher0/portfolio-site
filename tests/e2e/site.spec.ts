@@ -70,6 +70,64 @@ test('the page height does not grow as lazy sections hydrate', async ({ page }) 
   expect(Math.abs(late - early)).toBeLessThan(200)
 })
 
+// The rail is moved by a scrubbed tween, so a focused link can sit off screen
+// while the tween catches up. Tab through every panel and check where it lands.
+test('tabbing through the featured track keeps every panel link on screen', async ({ page, viewport }) => {
+  test.skip((viewport?.width ?? 0) < 1024, 'the rail only moves sideways on desktop widths')
+  await page.goto('/')
+  await page.locator('.track').scrollIntoViewIfNeeded()
+  // The section hydrates lazily; the rail only carries a transform once GSAP has it.
+  await expect.poll(
+    () => page.evaluate(() => document.querySelector<HTMLElement>('.track__rail')?.style.transform ?? ''),
+    { timeout: 10_000 },
+  ).toContain('translate')
+
+  const range = await page.evaluate(() => {
+    const track = document.querySelector('.track') as HTMLElement
+    const top = Math.round(track.getBoundingClientRect().top + window.scrollY)
+    return { top, end: top + track.offsetHeight - window.innerHeight }
+  })
+
+  // Start on the last link before the track, so the panels are reached by Tab alone.
+  await page.evaluate(() => {
+    const focusable = [...document.querySelectorAll<HTMLElement>('a[href], button')]
+    const track = document.querySelector('.track') as HTMLElement
+    focusable[focusable.findIndex((el) => track.contains(el)) - 1]!.focus()
+  })
+  await page.waitForTimeout(400)
+
+  const panelsSeen: number[] = []
+  let previousScroll = range.top
+  for (let i = 0; i < 10; i++) {
+    await page.keyboard.press('Tab')
+    await page.waitForTimeout(200)
+    const at = await page.evaluate(() => {
+      const el = document.activeElement as HTMLElement
+      const panels = [...document.querySelectorAll('[data-panel]')]
+      const panel = el.closest('[data-panel]')
+      const rect = el.getBoundingClientRect()
+      return {
+        panel: panel ? panels.indexOf(panel) + 1 : 0,
+        left: Math.round(rect.left), right: Math.round(rect.right),
+        top: Math.round(rect.top), bottom: Math.round(rect.bottom),
+        scrollY: Math.round(window.scrollY), width: window.innerWidth, height: window.innerHeight,
+      }
+    })
+    const where = `panel ${at.panel}, tab ${i + 1}`
+    expect(at.panel, `${where}: focus stayed inside the track`).toBeGreaterThan(0)
+    expect(at.left, `${where}: left edge`).toBeGreaterThanOrEqual(-5)
+    expect(at.right, `${where}: right edge`).toBeLessThanOrEqual(at.width + 5)
+    expect(at.top, `${where}: top edge`).toBeGreaterThanOrEqual(-5)
+    expect(at.bottom, `${where}: bottom edge`).toBeLessThanOrEqual(at.height + 5)
+    expect(at.scrollY, `${where}: above the track`).toBeGreaterThanOrEqual(range.top - 5)
+    expect(at.scrollY, `${where}: below the track`).toBeLessThanOrEqual(range.end + 5)
+    expect(at.scrollY, `${where}: jumped back up the page`).toBeGreaterThanOrEqual(previousScroll - 5)
+    previousScroll = at.scrollY
+    panelsSeen.push(at.panel)
+  }
+  expect([...new Set(panelsSeen)]).toEqual([1, 2, 3, 4, 5])
+})
+
 test('the lightbox traps focus and closes with Escape', async ({ page }) => {
   await page.goto('/work/ipora')
   await page.locator('.case__shotButton').first().click()
