@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 import projects from '~~/content/projects.json'
 import site from '~~/content/site.json'
 import { useMagnetic } from '~/composables/useMagnetic'
@@ -19,8 +19,28 @@ const activeTab = ref(0)
 const lightbox = ref<number | null>(null)
 const currentImages = computed(() => galleries.value[activeTab.value]?.images ?? [])
 
-const openLightbox = (i: number) => { lightbox.value = i }
-const closeLightbox = () => { lightbox.value = null }
+const dialog = ref<HTMLDialogElement | null>(null)
+const swipeStart = ref<number | null>(null)
+
+// showModal() gives the native focus trap, the backdrop and Escape handling.
+const openLightbox = async (i: number) => {
+  lightbox.value = i
+  await nextTick()
+  if (dialog.value && !dialog.value.open) dialog.value.showModal()
+}
+const closeLightbox = () => {
+  if (dialog.value?.open) dialog.value.close()
+  lightbox.value = null
+}
+watch(lightbox, (value) => { if (value === null && dialog.value?.open) dialog.value.close() })
+
+const onSwipeStart = (event: PointerEvent) => { swipeStart.value = event.clientX }
+const onSwipeEnd = (event: PointerEvent) => {
+  if (swipeStart.value === null) return
+  const delta = event.clientX - swipeStart.value
+  swipeStart.value = null
+  if (Math.abs(delta) > 45) step(delta < 0 ? 1 : -1)
+}
 const step = (delta: number) => {
   if (lightbox.value === null) return
   const total = currentImages.value.length
@@ -122,8 +142,13 @@ useHead({
       </span>
     </NuxtLink>
 
-    <dialog v-if="lightbox !== null" class="lightbox" open @keydown.esc="closeLightbox" @keydown.left="step(-1)" @keydown.right="step(1)">
-      <button class="lightbox__close" type="button" autofocus @click="closeLightbox">Close ✕</button>
+    <dialog
+      v-if="lightbox !== null" ref="dialog" class="lightbox"
+      @close="lightbox = null" @cancel="lightbox = null"
+      @keydown.left="step(-1)" @keydown.right="step(1)"
+      @pointerdown="onSwipeStart" @pointerup="onSwipeEnd" @pointercancel="swipeStart = null" @dragstart.prevent
+    >
+      <button class="lightbox__close" type="button" @click="closeLightbox">Close ✕</button>
       <figure class="lightbox__figure">
         <AppImage :src="currentImages[lightbox].src" :alt="currentImages[lightbox].alt" sizes="92vw" />
         <figcaption>
@@ -169,8 +194,11 @@ useHead({
 .case__nextInner { display: flex; flex-direction: column; gap: 10px; }
 .case__nextTitle { font-family: var(--font-display); font-size: var(--text-h2); }
 .case__next:hover .case__nextTitle { color: var(--accent); }
-.lightbox { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; border: 0; background: rgb(4 9 10 / 0.94); z-index: var(--z-overlay); display: grid; place-items: center; padding: 5vh 6vw; }
+.lightbox { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; border: 0; background: rgb(4 9 10 / 0.94); color: var(--ink); z-index: var(--z-overlay); padding: 5vh 6vw; touch-action: pan-y; }
+.lightbox[open] { display: grid; place-items: center; }
+.lightbox::backdrop { background: rgb(4 9 10 / 0.8); }
 .lightbox__figure { margin: 0; display: flex; flex-direction: column; gap: 14px; max-width: min(1200px, 92vw); }
+.lightbox__figure :deep(img) { user-select: none; -webkit-user-drag: none; }
 .lightbox__figure figcaption { display: flex; gap: 14px; color: var(--ink-2); font-size: 14px; }
 .lightbox__close { position: absolute; top: 24px; right: 28px; font-family: var(--font-mono); font-size: 12px; letter-spacing: var(--tracking-mono); text-transform: uppercase; }
 .lightbox__nav { position: absolute; top: 50%; font-size: 26px; color: var(--ink-2); padding: 12px 18px; }

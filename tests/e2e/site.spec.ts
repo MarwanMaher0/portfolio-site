@@ -58,3 +58,25 @@ test.describe('accessibility', () => {
   expect(serious.map((v) => `${v.id}: ${v.nodes.length}`)).toEqual([])
   })
 })
+
+test('the page height does not grow as lazy sections hydrate', async ({ page }) => {
+  await page.goto('/', { waitUntil: 'domcontentloaded' })
+  const early = await page.evaluate(() => document.documentElement.scrollHeight)
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight * 0.5))
+  await page.waitForTimeout(1500)
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
+  await page.waitForTimeout(1500)
+  const late = await page.evaluate(() => document.documentElement.scrollHeight)
+  expect(Math.abs(late - early)).toBeLessThan(200)
+})
+
+test('the lightbox traps focus and closes with Escape', async ({ page }) => {
+  await page.goto('/work/ipora')
+  await page.locator('.case__shotButton').first().click()
+  await expect(page.locator('.lightbox')).toBeVisible()
+  expect(await page.evaluate(() => document.querySelector('.lightbox')?.contains(document.activeElement))).toBe(true)
+  for (let i = 0; i < 8; i++) await page.keyboard.press('Tab')
+  expect(await page.evaluate(() => document.querySelector('.lightbox')?.contains(document.activeElement))).toBe(true)
+  await page.keyboard.press('Escape')
+  await expect(page.locator('.lightbox')).toHaveCount(0)
+})

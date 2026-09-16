@@ -16,11 +16,11 @@ onMounted(async () => {
   if (!canAnimate() || !root.value) return
   const { gsap, ScrollTrigger } = await loadGsap()
   ctx = gsap.context(() => {
-    const isMobile = window.innerWidth < 768
+    // The stage is sticky in CSS, so the page height never changes when this
+    // component hydrates. GSAP only reads progress and drives the animation.
     const timeline = gsap.timeline({
       scrollTrigger: {
-        trigger: root.value, start: 'top top', end: isMobile ? '+=160%' : '+=220%',
-        pin: true, scrub: 0.6, anticipatePin: 1,
+        trigger: root.value, start: 'top top', end: 'bottom bottom', scrub: 0.6,
         onUpdate: ({ progress }) => journey(props.band[0] + progress * (props.band[1] - props.band[0])),
         onToggle: ({ isActive }) => { if (isActive) opacity(1) },
       },
@@ -56,8 +56,9 @@ onBeforeUnmount(() => ctx?.revert())
 </template>
 
 <style scoped>
-.gate { position: relative; z-index: 1; }
-.gate__stage { position: relative; min-height: 100svh; display: grid; place-items: center; overflow: hidden; }
+/* The section owns the scroll length; the stage sticks inside it. No pin spacers. */
+.gate { position: relative; z-index: 1; height: 320svh; }
+.gate__stage { position: sticky; top: 0; height: 100svh; display: grid; place-items: center; overflow: hidden; }
 .gate__still { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(1.15); width: 120%; opacity: 0.4; }
 .gate__frame {
   position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
@@ -74,8 +75,10 @@ onBeforeUnmount(() => ctx?.revert())
 .gate--decide { --phase: var(--phase-decide); --phase-glow: var(--glow-decide); }
 .gate--ship { --phase: var(--phase-ship); --phase-glow: rgb(234 242 236 / 0.12); }
 .gate--learn { --phase: var(--phase-learn); --phase-glow: var(--glow-learn); }
+@media (max-width: 767px) { .gate { height: 260svh; } }
 @media (prefers-reduced-motion: reduce) {
-  .gate__stage { min-height: auto; padding-block: var(--section-pad); }
+  .gate { height: auto; }
+  .gate__stage { position: static; height: auto; min-height: 0; padding-block: var(--section-pad); }
   .gate__copy { position: static; transform: none; margin-top: 32px; }
   .gate__wipe { display: none; }
 }

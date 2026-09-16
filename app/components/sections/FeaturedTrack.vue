@@ -25,16 +25,27 @@ onMounted(async () => {
     const media = gsap.matchMedia()
     media.add('(min-width: 1024px)', () => {
       const panels = gsap.utils.toArray<HTMLElement>('[data-panel]')
-      const distance = () => track.value!.scrollWidth - window.innerWidth
+      const distance = () => Math.max(0, track.value!.scrollWidth - window.innerWidth)
       const tween = gsap.to(track.value, {
         x: () => -distance(), ease: 'none',
         scrollTrigger: {
-          trigger: root.value, start: 'top top', end: () => `+=${distance()}`,
-          pin: true, scrub: 0.7, invalidateOnRefresh: true, anticipatePin: 1,
+          trigger: root.value, start: 'top top', end: 'bottom bottom',
+          scrub: 0.7, invalidateOnRefresh: true,
           onUpdate: ({ progress }) => { index.value = Math.min(panels.length, Math.floor(progress * panels.length) + 1) },
         },
       })
       return () => tween.kill()
+    })
+
+    // Keyboard users tab through the panels; move the track to whichever panel has focus.
+    gsap.utils.toArray<HTMLElement>('[data-panel]').forEach((panel, panelIndex) => {
+      panel.addEventListener('focusin', () => {
+        if (window.innerWidth < 1024 || !root.value) return
+        const top = root.value.offsetTop
+        const span = root.value.offsetHeight - window.innerHeight
+        const target = top + (span * panelIndex) / Math.max(1, items.length - 1)
+        if (Math.abs(window.scrollY - target) > 40) window.scrollTo({ top: target, behavior: 'auto' })
+      })
     })
   }, root.value)
 })
@@ -43,7 +54,8 @@ onBeforeUnmount(() => ctx?.revert())
 
 <template>
   <section ref="root" class="track">
-    <div ref="track" class="track__rail">
+    <div class="track__viewport">
+      <div ref="track" class="track__rail">
       <article v-for="(project, i) in items" :key="project.slug" class="panel" data-panel>
         <div class="panel__text">
           <p class="mono">{{ String(i + 1).padStart(2, '0') }} / {{ String(items.length).padStart(2, '0') }}</p>
@@ -72,18 +84,25 @@ onBeforeUnmount(() => ctx?.revert())
           <ScreenStack v-if="project.images?.length" :images="project.images" />
           <TypographicPanel v-else :steps="['4 vendors evaluated', '1 build-vs-buy call', 'in production']" />
         </NuxtLink>
-      </article>
-    </div>
+        </article>
+      </div>
 
-    <div class="track__progress hide-sm" aria-hidden="true">
+      <div class="track__progress hide-sm" aria-hidden="true">
       <span class="track__bar"><span class="track__fill" :style="{ transform: `scaleX(${index / items.length})` }" /></span>
-      <span class="mono num">{{ String(index).padStart(2, '0') }} / {{ String(items.length).padStart(2, '0') }}</span>
+        <span class="mono num">{{ String(index).padStart(2, '0') }} / {{ String(items.length).padStart(2, '0') }}</span>
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.track { position: relative; overflow: hidden; }
+.track { position: relative; --panels: 5; }
+.track__viewport { overflow: hidden; }
+@media (min-width: 1024px) {
+  /* One screen per panel, so the page is the right height before any script runs. */
+  .track { height: calc(100svh + (var(--panels) - 1) * 100vw); }
+  .track__viewport { position: sticky; top: 0; height: 100svh; }
+}
 .track__rail { display: flex; }
 .panel {
   flex: none; width: 100vw; min-height: 100svh; display: grid; grid-template-columns: 40fr 60fr;
@@ -100,9 +119,15 @@ onBeforeUnmount(() => ctx?.revert())
 .panel__stack { display: flex; flex-wrap: wrap; gap: 8px; }
 .panel__cta { display: inline-block; margin-top: 8px; color: var(--accent); font-weight: 600; }
 .panel__visual { display: block; }
-.track__progress { position: absolute; left: clamp(24px, 5vw, 96px); bottom: 48px; display: flex; align-items: center; gap: 16px; width: min(320px, 30vw); }
+.track__progress { position: absolute; left: clamp(24px, 5vw, 96px); bottom: 48px; z-index: 3; display: flex; align-items: center; gap: 16px; width: min(320px, 30vw); }
 .track__bar { flex: 1; height: 2px; background: var(--line); overflow: hidden; }
 .track__fill { display: block; height: 100%; background: var(--accent); transform-origin: left; transition: transform 160ms linear; }
+@media (prefers-reduced-motion: reduce) {
+  .track { height: auto; }
+  .track__viewport { position: static; height: auto; }
+  .track__rail { flex-direction: column; }
+  .panel { width: 100%; min-height: 0; }
+}
 @media (max-width: 1023px) {
   .track__rail { flex-direction: column; }
   .panel { width: 100%; min-height: 0; grid-template-columns: 1fr; padding: 56px var(--gutter); border-bottom: 1px solid var(--line); }
