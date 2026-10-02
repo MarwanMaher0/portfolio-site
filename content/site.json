@@ -2,7 +2,7 @@
   "person": {
     "name": "Marwan Maher Mostafa",
     "shortName": "Marwan Maher",
-    "role": "Technical Project Manager & Engineer",
+    "role": "Full-Stack Engineer (Vue/Nuxt + Django)",
     "location": "Egypt",
     "availability": "Open to remote & relocation (KSA/UAE)",
     "timezone": "UTC+2 (Cairo)",
@@ -27,8 +27,8 @@
     }
   },
   "seo": {
-    "title": "Marwan Maher: Technical Project Manager & Engineer",
-    "description": "Technical Project Manager and engineer at SIPRC, Riyadh: five production systems, including an IP platform with 52 services live. Egypt; remote or KSA/UAE.",
+    "title": "Marwan Maher: Full-Stack Engineer, Vue/Nuxt + Django",
+    "description": "Full-stack engineer building Arabic-first, bilingual RTL products in Vue/Nuxt and Django. 52 IP services live on a platform I built. Remote (UTC+2) or KSA/UAE.",
     "ogImage": "/brand/og-image.png",
     "favicon": "/brand/favicon.svg",
     "appleTouchIcon": "/brand/apple-touch-icon.png",
@@ -36,20 +36,15 @@
   },
   "cv": [
     {
-      "label": "Technical Project Manager",
-      "file": "/cv/Marwan_Maher_Technical_PM_AI.pdf",
-      "hint": "For PM, product and digital-transformation roles",
+      "label": "Full-Stack Engineer",
+      "file": "/cv/Marwan_Maher_Senior_Fullstack_Vue.pdf",
+      "hint": "Vue/Nuxt, Django, React/Next — engineering roles",
       "primary": true
     },
     {
-      "label": "AI Implementation Engineer",
-      "file": "/cv/Marwan_Maher_AI_Implementation_Engineer.pdf",
-      "hint": "For AI and forward-deployed engineering roles"
-    },
-    {
-      "label": "Senior Full-Stack Engineer",
-      "file": "/cv/Marwan_Maher_Senior_Fullstack_Vue.pdf",
-      "hint": "For Vue, Nuxt and Django engineering roles"
+      "label": "Technical Project Manager",
+      "file": "/cv/Marwan_Maher_Technical_PM_AI.pdf",
+      "hint": "For technical PM and delivery roles"
     }
   ],
   "nav": [
@@ -78,10 +73,10 @@
     }
   ],
   "hero": {
-    "eyebrow": "Egypt · Open to remote & relocation (KSA/UAE)",
+    "eyebrow": "Remote (UTC+2) · Open to KSA/UAE relocation · 30-day notice",
     "name": "Marwan Maher",
-    "headline": "Technical Project Manager & Engineer.",
-    "sub": "I run the IT portfolio at SIPRC, the Saudi Intellectual Property Rights Company: five production systems, including an IP-management platform with 52 IP services live that I built end to end.",
+    "headline": "Full-Stack Engineer. Vue/Nuxt + Django.",
+    "sub": "I build Arabic-first, bilingual RTL products. At SIPRC I built an IP-management platform end to end that now runs 52 IP services, and I still write code while running IT delivery there.",
     "motto": [
       "Decide",
       "Ship",
