@@ -2,11 +2,14 @@
  * Writes sitemap.xml and llms.txt into the generated site, straight from the
  * content files, so they can never drift from the pages that actually exist.
  */
-import { readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const root = process.cwd()
-const out = join(root, '.output/public')
+// Locally Nitro writes to .output/public; on Vercel it detects the platform and
+// writes to .vercel/output/static instead. Use whichever this build produced.
+const vercelOut = join(root, '.vercel/output/static')
+const out = existsSync(vercelOut) ? vercelOut : join(root, '.output/public')
 const read = (file) => JSON.parse(readFileSync(join(root, 'content', file), 'utf8'))
 
 const site = read('site.json')
